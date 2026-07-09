@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>監考編排 · 同事檢視</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;font-family:"Microsoft JhengHei","PingFang HK","Noto Sans HK",Arial,sans-serif}
+  body{background:linear-gradient(135deg,#eef2f7,#dde5ef);color:#1e293b;min-height:100vh;padding:14px;font-size:14px}
+  .container{max-width:1600px;margin:0 auto}
+  header{background:linear-gradient(135deg,#0f766e,#0891b2);color:#fff;padding:16px 24px;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.12);margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  header h1{font-size:22px}header .sub{font-size:12px;opacity:.9;margin-top:2px}
+  .tabs{display:flex;gap:3px;margin-bottom:12px;flex-wrap:wrap;border-bottom:2px solid #cbd5e1}
+  .tab{padding:9px 14px;background:#fff;border:none;border-radius:8px 8px 0 0;cursor:pointer;font-size:13px;font-weight:600;color:#475569;transition:all .15s}
+  .tab:hover{background:#e2e8f0}.tab.active{background:#0891b2;color:#fff}
+  .panel{background:#fff;padding:20px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);display:none}
+  .panel.active{display:block}
+  h2{font-size:17px;margin-bottom:14px;color:#0f766e;border-left:4px solid #0891b2;padding-left:10px}
+  h3{font-size:14px;margin:14px 0 8px;color:#334155}
+  label{display:block;font-size:12px;color:#475569;margin-bottom:3px;font-weight:500}
+  input,select,textarea{width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:6px;font-size:13px;background:#fff;font-family:inherit}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:#0891b2;box-shadow:0 0 0 3px rgba(8,145,178,.1)}
+  textarea{resize:vertical;min-height:70px;font-family:inherit}
+  button{padding:7px 14px;border:none;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;transition:all .15s;font-family:inherit}
+  .btn-primary{background:#0891b2;color:#fff}.btn-primary:hover{background:#0e7490}
+  .btn-success{background:#16a34a;color:#fff}.btn-success:hover{background:#15803d}
+  .btn-danger{background:#dc2626;color:#fff}.btn-danger:hover{background:#b91c1c}
+  .btn-warn{background:#f59e0b;color:#fff}.btn-warn:hover{background:#d97706}
+  .btn-secondary{background:#64748b;color:#fff}.btn-secondary:hover{background:#475569}
+.btn-lang{background:rgba(255,255,255,0.18);color:#fff;border:1.5px solid rgba(255,255,255,0.45);font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;cursor:pointer;transition:all 0.2s;letter-spacing:0.5px;min-width:42px;text-align:center;margin-left:4px}
+.btn-lang:hover{background:rgba(255,255,255,0.3);border-color:#fff}
+  .btn-sm{padding:3px 9px;font-size:11px}
+  table{width:100%;border-collapse:collapse;margin-top:10px;font-size:12.5px}
+  th,td{padding:6px 8px;text-align:left;border-bottom:1px solid #e2e8f0;vertical-align:top}
+  th{background:#f1f5f9;font-weight:600;color:#334155}
+  /* 1. 當滑鼠移過去時，給予淡淡的提示（手機版會自動忽略） */
+  tr:hover{background: #f8fafc; cursor: pointer;}
+  /* 2. 當表格列被點擊（選取）後固定顯示的背景顏色 */
+  tr.selected-row {background: #bae6fd !important; /* 使用亮藍色高亮，你也可以改成其他顏色 */}
+  .badge{display:inline-block;padding:2px 7px;border-radius:10px;font-size:10.5px;font-weight:600;margin:1px}
+  .b-blue{background:#dbeafe;color:#1e40af}
+  .b-red{background:#fee2e2;color:#991b1b}
+  .b-amber{background:#fef3c7;color:#92400e}
+  .b-purple{background:#ede9fe;color:#5b21b6}
+  .b-gray{background:#e2e8f0;color:#334155}
+  .b-teal{background:#ccfbf1;color:#134e4a}
+  .b-sen{background:#fed7aa;color:#9a3412;font-weight:700}
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:14px}
+  .stat-card{background:linear-gradient(135deg,#f0fdfa,#e0f2fe);padding:12px;border-radius:10px;border-left:4px solid #0891b2}
+  .stat-card .label{font-size:11px;color:#64748b}.stat-card .value{font-size:20px;font-weight:700;color:#0f766e;margin-top:2px}
+  .alert{padding:9px 12px;border-radius:6px;margin:8px 0;font-size:12.5px}
+  .a-info{background:#dbeafe;color:#1e40af;border-left:4px solid #0891b2}
+  .a-warn{background:#fef3c7;color:#92400e;border-left:4px solid #f59e0b}
+  .a-ok{background:#dcfce7;color:#166534;border-left:4px solid #16a34a}
+  .a-err{background:#fee2e2;color:#991b1b;border-left:4px solid #dc2626}
+  .session-hdr{background:linear-gradient(90deg,#0891b2,#0f766e);color:#fff;padding:7px 12px;border-radius:6px;margin-top:14px;font-weight:700;font-size:13px}
+  .standby-chip{display:inline-block;background:#fde68a;color:#78350f;padding:2px 7px;border-radius:10px;font-size:10.5px;margin:1px}
+  .aa-row{background:#faf5ff}
+  .toolbar{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap;align-items:center}
+  .filter-bar{background:#f0fdfa;border:1px solid #99f6e4;padding:10px 12px;border-radius:8px;margin-bottom:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .filter-bar label{margin:0;font-size:13px;font-weight:600;color:#0f766e}
+  .filter-bar select{max-width:280px;flex:1;min-width:200px}
+  .filter-bar .chip{background:#0891b2;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px}
+  .msg-item{background:#f8fafc;border-left:4px solid #0891b2;padding:10px 14px;border-radius:8px;margin-bottom:10px}
+  .msg-item .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:12px;color:#64748b}
+  .msg-item .head b{color:#0f766e;font-size:13px}
+  .msg-item .body{color:#1e293b;white-space:pre-wrap;line-height:1.5}
+  .msg-item .actions{margin-top:6px;display:flex;gap:6px}
+  .msg-item.mine{border-color:#f59e0b;background:#fffbeb}
+  .lock-overlay{position:fixed;inset:0;background:rgba(15,23,42,.9);display:flex;justify-content:center;align-items:center;z-index:9999;backdrop-filter:blur(6px)}
+  .lock-box{background:#fff;padding:32px;border-radius:14px;width:90%;max-width:400px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+  .lock-box h2{border:none;padding:0;text-align:center}.lock-box .icon{font-size:46px;margin-bottom:10px}
+  .no-data{padding:40px;text-align:center;color:#94a3b8;font-size:14px}
+  @media print{
+    body{background:#fff;padding:0}
+    header,.tabs,.filter-bar,.toolbar,button,.no-print{display:none!important}
+    .panel{box-shadow:none;padding:0;display:block!important}
+    .panel:not(#panel-print){display:none!important}
+    .session-hdr{background:#e2e8f0;color:#000;border:1px solid #94a3b8}
+    table{page-break-inside:auto}tr{page-break-inside:avoid}
+  }
+  /* =======================================================
+   新增：適應不同螢幕裝置寬度 (RWD 響應式優化)
+   ======================================================= */
+
+/* 平板與手機版 (1024px 以下) */
+@media screen and (max-width: 1024px) {
+  body { padding: 10px; font-size: 13px; }
+  header { padding: 12px 18px; }
+  header h1 { font-size: 19px; }
+  .panel { padding: 14px; }
+  
+  /* 讓留言板的表單在窄版時自動改為單欄排版 */
+  #panel-board div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+}
+
+/* 純手機版 (768px 以下) */
+@media screen and (max-width: 768px) {
+  header { flex-direction: column; align-items: flex-start; }
+  header div:last-child { width: 100%; margin-top: 8px; }
+  header button { flex: 1; text-align: center; }
+  
+  .tabs { gap: 2px; }
+  .tab { padding: 8px 10px; font-size: 12px; flex: 1; text-align: center; }
+  
+  .filter-bar { padding: 8px; gap: 6px; flex-direction: column; align-items: flex-start; }
+  .filter-bar select { max-width: 100%; min-width: 100%; }
+  .filter-bar label { margin-left: 0 !important; margin-top: 4px; }
+  
+  /* 關鍵：防止大表格撐破手機螢幕，允許橫向滾動查看 */
+  #resultTable, #printView {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 8px;
+  }
+  table { font-size: 11.5px; min-width: 600px; } /* 設定最小寬度確保表格不被壓扁 */
+  th, td { padding: 5px 6px; }
+}
+
+
+/* =======================================================
+   優化：實際列印與匯出 PDF 樣式
+   ======================================================= */
+@media print {
+  /* 設定 A4 紙張與邊距 */
+  @page {
+    size: A4 portrait;
+    margin: 12mm 10mm;
+  }
+
+  body { background: #fff; padding: 0; color: #000; font-size: 12px; }
+  .container { max-width: 100%; width: 100%; margin: 0; }
+  
+  /* 隱藏所有不需要列印的 UI 元素 */
+  header, .tabs, .filter-bar, .toolbar, button, .no-print { display: none !important; }
+  
+  /* 讓需要列印的面板完全填滿 A4 寬度 */
+  .panel { box-shadow: none; padding: 0; display: block !important; width: 100% !important; }
+  .panel:not(#panel-print) { display: none !important; }
+  
+  /* 強制在黑白列印時也能印出標題背景色 */
+  .session-hdr { 
+    background: #e2e8f0 !important; 
+    color: #000 !important; 
+    border: 1px solid #94a3b8;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    padding: 6px 10px;
+  }
+  
+  /* 表格列印斷頁優化 */
+  table { width: 100% !important; border-collapse: collapse; break-inside: auto; }
+  tr { break-inside: avoid; page-break-inside: avoid; }
+  th, td { border-bottom: 1px solid #94a3b8 !important; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div>
+      <h1 data-i18n="hdr_title">📋 監考編排 · 同事檢視</h1>
+      <div class="sub" id="hdrSub">尚未載入資料</div>
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap">
+      <button class="btn-secondary" onclick="window.print()" data-i18n="btn_print">🖨 列印</button>
+      <button class="btn-warn" onclick="openAdmin()" data-i18n="btn_admin">🔐 管理員</button>
+      <button class="btn-lang btn-sm" onclick="toggleLang()" id="langBtn" title="Switch Language / 切換語言">EN</button>
+    </div>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="result" onclick="switchTab('result')" data-i18n="tab_workload">📊 老師工作量</button>
+    <button class="tab" data-tab="print" onclick="switchTab('print')" data-i18n="tab_print">🖨 列印時間表</button>
+  </div>
+
+  <div id="panel-result" class="panel active">
+    <h2 data-i18n="wl_title">📊 老師工作量</h2>
+    <div class="filter-bar">
+      <label data-i18n="wl_highlight">👤 反白顯示：</label>
+      <select id="filterTeacher" onchange="renderResults()">
+        <option value="" data-i18n="wl_none">— 不指定 —</option>
+      </select>
+      <label style="margin-left:12px" data-i18n="wl_sort">🔢 排序：</label>
+      <select id="workloadSort" style="max-width:180px" onchange="renderResults()">
+        <option value="hoursDesc" data-i18n="wl_sort_hours_desc">時數（高至低）</option>
+        <option value="hoursAsc" data-i18n="wl_sort_hours_asc">時數（低至高）</option>
+        <option value="nameAsc" data-i18n="wl_sort_name">姓名（A→Z）</option>
+        <option value="deptAsc" data-i18n="wl_sort_dept">部門</option>
+      </select>
+      <span id="filterInfo" class="chip" style="display:none"></span>
+    </div>
+    <div class="stat-grid" id="statGrid"></div>
+    <h3 data-i18n="wl_overview">⚖️ 工作量一覽</h3>
+    <div id="resultTable"><div class="no-data">尚未載入資料</div></div>
+  </div>
+
+  <div id="panel-print" class="panel">
+    <h2 data-i18n="print_title">🖨 列印時間表（唯讀）</h2>
+    <div class="filter-bar no-print">
+      <label data-i18n="print_showme">👤 只顯示我的：</label>
+      <select id="filterTeacherP" onchange="renderPrintView()">
+        <option value="" data-i18n="print_all">— 全部 —</option>
+      </select>
+      <label style="margin-left:8px" data-i18n="print_date">日期：</label>
+      <select id="printDate" style="max-width:160px" onchange="renderPrintView()"></select>
+      <label style="margin-left:8px" data-i18n="print_level">級別：</label>
+      <select id="printLevel" style="max-width:180px" onchange="renderPrintView()"></select>
+      <button class="btn-primary btn-sm" onclick="window.print()" data-i18n="btn_print">🖨 列印</button>
+    </div>
+    <div id="printView"><div class="no-data">尚未載入資料</div></div>
+  </div>
+
+  <div id="panel-board" class="panel" style="display:none"></div>
+</div>
+
+<div id="adminGate" class="lock-overlay" style="display:none">
+  <div class="lock-box">
+    <div class="icon">🔐</div>
+    <h2 data-i18n="admin_login">管理員入口</h2>
+    <p style="color:#64748b;margin:10px 0 16px" data-i18n="admin_pwd_prompt">請輸入管理員密碼</p>
+    <input type="password" id="adminPass" data-i18n-placeholder="admin_pwd_ph" placeholder="密碼" style="margin-bottom:10px" onkeydown="if(event.key==='Enter')checkAdmin()">
+    <div style="display:flex;gap:6px">
+      <button class="btn-primary" style="flex:1" onclick="checkAdmin()" data-i18n="admin_enter">✅ 進入</button>
+      <button class="btn-secondary" style="flex:1" onclick="closeAdmin()" data-i18n="admin_cancel">取消</button>
+    </div>
+    <div id="adminErr" style="color:#dc2626;font-size:12px;margin-top:8px;display:none" data-i18n="admin_pwd_err">❌ 密碼錯誤</div>
+  </div>
+</div>
+
+<div id="adminPanel" class="lock-overlay" style="display:none">
+  <div class="lock-box" style="max-width:640px;text-align:left">
+    <h2 style="text-align:center" data-i18n="apanel_title">🛠 管理員面板</h2>
+    <div style="background:#fef3c7;padding:12px;border-radius:8px;margin:12px 0;font-size:12px;color:#78350f" data-i18n="apanel_hint">
+      <b>提示：</b>此面板僅供管理員使用，可載入 JSON 資料檔（覆蓋現有資料）。
+    </div>
+    <h3 data-i18n="apanel_load">📂 載入資料</h3>
+    <input type="file" id="jsonFile" accept=".json" onchange="loadJSON(this)" style="margin:6px 0">
+    <div style="font-size:12px;color:#64748b;margin-bottom:14px" data-i18n="apanel_load_hint">選擇由主系統匯出的 JSON 檔案，會覆蓋目前檢視器內的資料。</div>
+
+    <div style="margin-top:16px;text-align:right">
+      <button class="btn-secondary" onclick="closeAdminPanel()" data-i18n="apanel_close">關閉</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const I18N = {
+  "hdr_title": {"zh": "📋 監考編排 · 同事檢視", "en": "📋 Invigilation · Staff Viewer"},
+  "hdr_sub_nodata": {"zh": "尚未載入資料", "en": "No data loaded"},
+  "hdr_sub_load_hint": {"zh": "尚未載入資料 · 請由「🔐 管理員」載入 JSON", "en": "No data loaded · Go to 🔐 Admin to load JSON"},
+  "btn_print": {"zh": "🖨 列印", "en": "🖨 Print"},
+  "btn_admin": {"zh": "🔐 管理員", "en": "🔐 Admin"},
+  "tab_workload": {"zh": "📊 老師工作量", "en": "📊 Workload"},
+  "tab_print": {"zh": "🖨 列印時間表", "en": "🖨 Timetable"},
+  "tab_board": {"zh": "💬 留言板", "en": "💬 Message Board"},
+  "wl_title": {"zh": "📊 老師工作量", "en": "📊 Teacher Workload"},
+  "wl_highlight": {"zh": "👤 反白顯示：", "en": "👤 Highlight:"},
+  "wl_none": {"zh": "— 不指定 —", "en": "— None —"},
+  "wl_sort": {"zh": "🔢 排序：", "en": "🔢 Sort:"},
+  "wl_sort_hours_desc": {"zh": "時數（高至低）", "en": "Hours (High→Low)"},
+  "wl_sort_hours_asc": {"zh": "時數（低至高）", "en": "Hours (Low→High)"},
+  "wl_sort_name": {"zh": "姓名（A→Z）", "en": "Name (A→Z)"},
+  "wl_sort_dept": {"zh": "部門", "en": "Department"},
+  "wl_overview": {"zh": "⚖️ 工作量一覽", "en": "⚖️ Workload Overview"},
+  "wl_teachers": {"zh": "老師", "en": "Teachers"},
+  "wl_sen": {"zh": "SEN", "en": "SEN"},
+  "wl_exams": {"zh": "考試", "en": "Exams"},
+  "wl_assignments": {"zh": "監考人次", "en": "Assignments"},
+  "wl_aa_count": {"zh": "AA 人次", "en": "AA Slots"},
+  "wl_avg_hours": {"zh": "平均時數", "en": "Avg Hours"},
+  "wl_max_gap": {"zh": "最大差距", "en": "Max Gap"},
+  "wl_my_hours": {"zh": "我的時數", "en": "My Hours"},
+  "wl_highlight_label": {"zh": "反白：", "en": "Highlight: "},
+  "wl_no_teachers": {"zh": "尚無老師資料", "en": "No teacher data"},
+  "wl_no_data": {"zh": "尚未載入資料", "en": "No data loaded"},
+  "wl_exempt": {"zh": "免監", "en": "Exempt"},
+  "wl_table_rank": {"zh": "#", "en": "#"},
+  "wl_table_teacher": {"zh": "老師", "en": "Teacher"},
+  "wl_table_dept_role": {"zh": "部門 / 職務", "en": "Dept / Role"},
+  "wl_table_hours": {"zh": "時數", "en": "Hours"},
+  "wl_table_cap": {"zh": "上限", "en": "Cap"},
+  "wl_table_usage": {"zh": "使用率", "en": "Usage"},
+  "wl_table_diff": {"zh": "與平均差", "en": "vs Avg"},
+  "wl_table_count": {"zh": "人次", "en": "Slots"},
+  "print_title": {"zh": "🖨 列印時間表（唯讀）", "en": "🖨 Timetable (Read-only)"},
+  "print_showme": {"zh": "👤 只顯示我的：", "en": "👤 Show mine:"},
+  "print_all": {"zh": "— 全部 —", "en": "— All —"},
+  "print_date": {"zh": "日期：", "en": "Date:"},
+  "print_level": {"zh": "級別：", "en": "Level:"},
+  "print_no_match": {"zh": "無符合條件的考試", "en": "No matching exams"},
+  "print_no_data": {"zh": "尚未載入資料", "en": "No data loaded"},
+  "print_timetable": {"zh": "監考時間表", "en": "Invigilation Timetable"},
+  "print_not_assigned": {"zh": "未", "en": "N/A"},
+  "board_title": {"zh": "💬 留言板 · 調動申請", "en": "💬 Message Board · Swap Requests"},
+  "board_info": {"zh": "💡 所有同事均可留言申請調動或提出問題。請留下姓名以便回覆。留言僅儲存在本瀏覽器（localStorage）。", "en": "💡 All staff can post swap requests or questions. Please leave your name. Messages are stored in this browser (localStorage)."},
+  "board_post": {"zh": "✍️ 發表留言", "en": "✍️ Post a Message"},
+  "board_name": {"zh": "姓名（或代號）", "en": "Name (or Code)"},
+  "board_select_name": {"zh": "— 選擇姓名 —", "en": "— Select Name —"},
+  "board_ref": {"zh": "相關日期 / 場次（選填）", "en": "Date / Session (optional)"},
+  "board_ref_ph": {"zh": "例：2026-08-26 S2 / 上午 / #012", "en": "e.g. 2026-08-26 S2 / AM / #012"},
+  "board_body": {"zh": "內容", "en": "Content"},
+  "board_body_ph": {"zh": "請簡述調動申請或詢問內容...", "en": "Describe your swap request or question..."},
+  "board_submit": {"zh": "📮 送出留言", "en": "📮 Submit"},
+  "board_clear": {"zh": "清空", "en": "Clear"},
+  "board_msg_list": {"zh": "📜 留言列表", "en": "📜 Messages"},
+  "board_msg_count": {"zh": "則", "en": " posts"},
+  "board_no_msgs": {"zh": "尚無留言，歡迎首個發表", "en": "No messages yet. Be the first!"},
+  "board_custom_input": {"zh": "— 自訂輸入 —", "en": "— Custom Input —"},
+  "admin_login": {"zh": "管理員入口", "en": "Admin Login"},
+  "admin_pwd_prompt": {"zh": "請輸入管理員密碼", "en": "Please enter admin password"},
+  "admin_pwd_ph": {"zh": "密碼", "en": "Password"},
+  "admin_enter": {"zh": "✅ 進入", "en": "✅ Enter"},
+  "admin_cancel": {"zh": "取消", "en": "Cancel"},
+  "admin_pwd_err": {"zh": "❌ 密碼錯誤", "en": "❌ Wrong password"},
+  "apanel_title": {"zh": "🛠 管理員面板", "en": "🛠 Admin Panel"},
+  "apanel_hint": {"zh": "<b>提示：</b>此面板僅供管理員使用，可載入 JSON 資料檔（覆蓋現有資料）。", "en": "<b>Note:</b> Admin only. Load JSON data files (overwrites existing data)."},
+  "apanel_load": {"zh": "📂 載入資料", "en": "📂 Load Data"},
+  "apanel_load_hint": {"zh": "選擇由主系統匯出的 JSON 檔案，會覆蓋目前檢視器內的資料。", "en": "Select a JSON file exported from the main system. This will overwrite current viewer data."},
+  "apanel_msgs": {"zh": "💬 留言管理", "en": "💬 Message Management"},
+  "apanel_no_msgs": {"zh": "尚無留言", "en": "No messages"},
+  "apanel_clear_msgs": {"zh": "🗑 清空全部留言", "en": "🗑 Clear All Messages"},
+  "apanel_close": {"zh": "關閉", "en": "Close"},
+  "btn_save": {"zh": "💾 儲存", "en": "💾 Save"},
+  "btn_delete": {"zh": "🗑 刪除", "en": "🗑 Delete"},
+  "alert_fill_name": {"zh": "請填寫姓名", "en": "Please enter your name"},
+  "alert_fill_body": {"zh": "請填寫留言內容", "en": "Please enter message content"},
+  "prompt_enter_name": {"zh": "請輸入你的姓名 / 代號：", "en": "Please enter your name / code:"},
+  "alert_saved": {"zh": "✅ 已儲存", "en": "✅ Saved"},
+  "confirm_del_msg": {"zh": "確定刪除此留言？", "en": "Delete this message?"},
+  "confirm_clear_all": {"zh": "確定清空全部", "en": "Delete all"},
+  "confirm_clear_all2": {"zh": " 則留言？此動作無法還原。", "en": " messages? This cannot be undone."},
+  "alert_format_err": {"zh": "格式不符", "en": "Invalid format"},
+  "alert_read_fail": {"zh": "❌ 讀取失敗：", "en": "❌ Read failed: "},
+  "alert_loaded": {"zh": "✅ 已載入", "en": "✅ Loaded"},
+  "alert_export_time": {"zh": "匯出時間：", "en": "Export time: "},
+  "print_table_no": {"zh": "No.", "en": "No."},
+  "print_table_time": {"zh": "Time", "en": "Time"},
+  "print_table_subject": {"zh": "Subject", "en": "Subject"},
+  "print_table_venue": {"zh": "Venue", "en": "Venue"},
+  "print_table_inv": {"zh": "Invigilation", "en": "Invigilation"},
+};
+
+let currentLang = localStorage.getItem('viewerLang') || 'zh';
+
+function t(key, params) {
+  const entry = I18N[key];
+  if (!entry) return key;
+  let text = entry[currentLang] || entry['zh'] || key;
+  if (params) {
+    Object.keys(params).forEach(k => {
+      text = text.replace('{' + k + '}', params[k]);
+    });
+  }
+  return text;
+}
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('viewerLang', lang);
+  updateLangBtn();
+  applyI18n();
+}
+
+function toggleLang() {
+  setLang(currentLang === 'zh' ? 'en' : 'zh');
+}
+
+function updateLangBtn() {
+  const btn = document.getElementById('langBtn');
+  if (btn) btn.textContent = currentLang === 'zh' ? 'EN' : '中文';
+}
+
+function applyI18n() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const translated = t(key);
+    if (translated && translated !== key) {
+      el.textContent = translated;
+    }
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    const translated = t(key);
+    if (translated && translated !== key) {
+      el.placeholder = translated;
+    }
+  });
+  window.dispatchEvent(new CustomEvent('langchange'));
+}
+
+
+const STORAGE_DATA='viewer_data_v1';
+const ADMIN_PASS='admin2026';
+let data={config:{title:'',rules:{roles:[],largeRooms:[]}},teachers:[],exams:[],subjects:[],allocation:[]};
+
+function t2m(t){if(!t)return 0;const[h,m]=t.split(':').map(Number);return h*60+m}
+function m2t(m){const h=Math.floor(m/60),mm=m%60;return String(h).padStart(2,'0')+':'+String(mm).padStart(2,'0')}
+function durMin(s,e){return t2m(e)-t2m(s)}
+function isLargeRoom(v){return((data.config.rules||{}).largeRooms||[]).some(r=>v&&v.toLowerCase()===r.toLowerCase())}
+function getRoleColor(r){const x=((data.config.rules||{}).roles||[]).find(y=>y.name===r);return x?x.color:'b-gray'}
+function getRoleCap(r){const x=((data.config.rules||{}).roles||[]).find(y=>y.name===r);return x?x.cap:-1}
+function getEffectiveCap(t){if(t.cap&&t.cap>0)return t.cap;if(t.role){const c=getRoleCap(t.role);if(c>=0)return c}return -1}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c])}
+
+function partTime(e,a){
+  if(!e)return a.start+'-'+a.end;
+  if(a.isStandby||a.part==='full')return e.start+'-'+e.end;
+  if(a.part&&a.part.indexOf('aa')===0)return a.start+'-'+a.end;
+  return a.start+'-'+a.end;
+}
+
+function computeHours(){
+  const h={};data.teachers.forEach(t=>h[t.id]=0);
+  const dRules=((data.config.rules||{}).dateSessionRules)||[];
+  data.allocation.forEach(a=>{
+    let mins=durMin(a.start,a.end);
+    if(a.isStandby){mins=Math.round(mins*((data.config.rules||{}).standbyWorkloadRatio||0.5))}
+    else{
+      const dr=dRules.find(r=>r.date===a.date&&(r.sessions||[]).some(s=>{const e=data.exams.find(x=>x.id===a.examId);return e&&e.session===s}));
+      if(dr&&dr.hourMul)mins=Math.round(mins*dr.hourMul);
+    }
+    h[a.teacherId]=(h[a.teacherId]||0)+mins;
+  });
+  return h;
+}
+
+function saveData(){try{localStorage.setItem(STORAGE_DATA,JSON.stringify(data))}catch(e){console.warn('save失敗',e)}}
+function loadData(){try{const s=localStorage.getItem(STORAGE_DATA);if(s){data=JSON.parse(s);return true}}catch(e){}return false}
+
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===t));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+  document.getElementById('panel-'+t).classList.add('active');
+  if(t==='result')renderResults();
+  else if(t==='print')renderPrintView();
+}
+
+function fillTeacherSelects(){
+  const teachers=data.teachers.slice().sort((a,b)=>(a.name||'').localeCompare(b.name||''));
+  const opts='<option value="" data-i18n="print_all">— 全部 —</option>'+teachers.map(t=>`<option value="${t.id}">${esc(t.name)}${t.code?' ('+esc(t.code)+')':''}${t.isSen?' [SEN]':''}</option>`).join('');
+  const f1=document.getElementById('filterTeacher');const f2=document.getElementById('filterTeacherP');
+  const cur1=f1.value,cur2=f2.value;
+  f1.innerHTML=opts;f1.value=cur1;
+  f2.innerHTML=opts;f2.value=cur2;
+}
+
+function fillLevelSelect(){
+  const lv=[...new Set(data.exams.map(e=>e.level))];
+  const cur=document.getElementById('printLevel').value;
+  document.getElementById('printLevel').innerHTML='<option value="">'+t('print_all')+'</option>'+lv.map(l=>`<option ${l===cur?'selected':''}>${esc(l)}</option>`).join('');
+}
+
+function renderResults(){
+  const filterId=document.getElementById('filterTeacher').value;
+  const info=document.getElementById('filterInfo');
+  if(filterId){
+    const sel=data.teachers.find(x=>x.id===filterId);
+    info.style.display='inline-block';info.textContent=t('wl_highlight_label')+(sel?sel.name:'—');
+  } else info.style.display='none';
+
+  const stat=document.getElementById('statGrid');
+  const hr=computeHours(),ar=Object.values(hr);
+  const avg=ar.length?ar.reduce((a,b)=>a+b,0)/ar.length:0;
+  const mx=ar.length?Math.max(...ar):0,mn=ar.length?Math.min(...ar):0;
+  const senN=data.teachers.filter(t=>t.isSen).length;
+  const aaA=data.allocation.filter(a=>a.isAA).length;
+  const myMins=filterId?(hr[filterId]||0):0;
+  stat.innerHTML=`
+    <div class="stat-card"><div class="label">${t('wl_teachers')}</div><div class="value">${data.teachers.length}</div></div>
+    <div class="stat-card"><div class="label">${t('wl_sen')}</div><div class="value">${senN}</div></div>
+    <div class="stat-card"><div class="label">${t('wl_exams')}</div><div class="value">${data.exams.length}</div></div>
+    <div class="stat-card"><div class="label">${t('wl_assignments')}</div><div class="value">${data.allocation.length}</div></div>
+    <div class="stat-card"><div class="label">${t('wl_aa_count')}</div><div class="value">${aaA}</div></div>
+    <div class="stat-card"><div class="label">${t('wl_avg_hours')}</div><div class="value">${(avg/60).toFixed(2)}h</div></div>
+    <div class="stat-card"><div class="label">${t('wl_max_gap')}</div><div class="value">${((mx-mn)/60).toFixed(2)}h</div></div>
+    ${filterId?`<div class="stat-card" style="border-left-color:#f59e0b"><div class="label">${t('wl_my_hours')}</div><div class="value">${(myMins/60).toFixed(2)}h</div></div>`:''}`;
+
+  const box=document.getElementById('resultTable');
+  if(!data.teachers.length){box.innerHTML='<div class="no-data">'+t('wl_no_teachers')+'</div>';return}
+
+  const sortMode=document.getElementById('workloadSort').value;
+  const rows=data.teachers.slice();
+  if(sortMode==='hoursDesc')rows.sort((a,b)=>(hr[b.id]||0)-(hr[a.id]||0));
+  else if(sortMode==='hoursAsc')rows.sort((a,b)=>(hr[a.id]||0)-(hr[b.id]||0));
+  else if(sortMode==='nameAsc')rows.sort((a,b)=>(a.name||'').localeCompare(b.name||''));
+  else if(sortMode==='deptAsc')rows.sort((a,b)=>((a.dept||'')+a.name).localeCompare((b.dept||'')+b.name));
+
+  const mxV=mx||1;
+  const trs=rows.map((tr,i)=>{
+    const h=hr[tr.id]||0;
+    const cap=getEffectiveCap(tr);
+    const pct=cap>0?Math.min(100,(h/cap)*100):(h/mxV)*100;
+    const diff=h-avg;
+    const cls=cap>0&&h>=cap?'cap':(Math.abs(diff)>30?'over':'');
+    const cntTotal=data.allocation.filter(a=>a.teacherId===tr.id).length;
+    const cntAA=data.allocation.filter(a=>a.teacherId===tr.id&&a.isAA).length;
+    const cntSB=data.allocation.filter(a=>a.teacherId===tr.id&&a.isStandby).length;
+    const highlight=filterId===tr.id?' style="background:#fef3c7"':'';
+    return `<tr${highlight}>
+      <td style="text-align:center;color:#94a3b8">${i+1}</td>
+      <td><b>${esc(tr.name)}</b>${tr.code?' ('+esc(tr.code)+')':''}${tr.isSen?' <span class="badge b-sen">SEN</span>':''}</td>
+      <td><span class="badge b-gray">${esc(tr.dept||'-')}</span></td>
+      <td style="text-align:right;font-weight:700;color:#0f766e">${(h/60).toFixed(2)}h</td>
+      <td style="width:28%"><div class="fair-bar"><div class="fair-fill ${cls}" style="width:${pct}%"></div></div></td>
+      <td style="text-align:right;color:${diff>0?'#dc2626':(diff<0?'#16a34a':'#64748b')}">${diff>=0?'+':''}${(diff/60).toFixed(2)}h</td>
+      <td style="text-align:center">${cntTotal}${cntAA?` <span class="badge b-sen">AA×${cntAA}</span>`:''}${cntSB?` <span class="standby-chip">SB×${cntSB}</span>`:''}</td>
+    </tr>`;
+  }).join('');
+
+  box.innerHTML=`
+    <style>.fair-bar{height:8px;background:#e2e8f0;border-radius:4px;overflow:hidden}.fair-fill{height:100%;background:linear-gradient(90deg,#16a34a,#0891b2)}.fair-fill.over{background:linear-gradient(90deg,#f59e0b,#dc2626)}.fair-fill.cap{background:linear-gradient(90deg,#ec4899,#be185d)}</style>
+    <table>
+      <thead><tr><th style="width:36px">${t('wl_table_rank')}</th><th>${t('wl_table_teacher')}</th><th>${t('wl_table_dept_role')}</th><th style="text-align:right">${t('wl_table_hours')}</th><th>${t('wl_table_usage')}</th><th style="text-align:right">${t('wl_table_diff')}</th><th style="text-align:center">${t('wl_table_count')}</th></tr></thead>
+      <tbody>${trs}</tbody>
+    </table>`;
+}
+
+function renderPrintView(){
+  const filterId=document.getElementById('filterTeacherP').value;
+  const dates=[...new Set(data.exams.map(e=>e.date))].sort();
+  const pd=document.getElementById('printDate');
+  const cur=pd.value;
+  pd.innerHTML='<option value="">全部</option>'+dates.map(d=>`<option ${d===cur?'selected':''}>${esc(d)}</option>`).join('');
+  const fD=pd.value,fL=document.getElementById('printLevel').value;
+  let list=data.exams.slice();
+  if(fD)list=list.filter(e=>e.date===fD);
+  if(fL)list=list.filter(e=>e.level===fL);
+  if(filterId){
+    const myExams=new Set(data.allocation.filter(a=>a.teacherId===filterId).map(a=>a.examId));
+    list=list.filter(e=>myExams.has(e.id));
+  }
+  list.sort((a,b)=>(a.date+a.session+a.start).localeCompare(b.date+b.session+b.start));
+  const filterName=filterId?(data.teachers.find(t=>t.id===filterId)||{}).name:'';
+  let html=`<h3 style="text-align:center;margin:12px 0">${esc(data.config.title||t('print_timetable'))}${filterName?` — ${esc(filterName)}`:''}</h3>`;
+  let cd='',cs='';
+  list.forEach(e=>{
+    if(e.date!==cd||e.session!==cs){if(cd)html+='</tbody></table>';cd=e.date;cs=e.session;html+=`<div class="session-hdr">${esc(e.date)} · Session ${e.session}</div><table><thead><tr><th>${t("print_table_no")}</th><th>Form</th><th>${t("print_table_time")}</th><th>${t("print_table_subject")}</th><th>Dur</th><th>${t("print_table_venue")}</th><th>${t("print_table_inv")}</th><th>SB</th><th>AA</th></tr></thead><tbody>`}
+    const als=data.allocation.filter(a=>a.examId===e.id||(a.mergedExamIds||[]).includes(e.id));
+    const vI=e.venues.map(v=>{
+      const lst=als.filter(a=>a.venue===v).sort((a,b)=>a.start.localeCompare(b.start));
+      if(!lst.length)return `<b>${esc(v)}:</b> <span style="color:#dc2626">${t("print_not_assigned")}</span>`;
+      return `<b>${esc(v)}:</b> `+lst.map(a=>{
+        const t=data.teachers.find(x=>x.id===a.teacherId);
+        const nm=t?esc(t.code||t.name):'<span style="color:#dc2626">TBC</span>';
+        const isMine=filterId&&a.teacherId===filterId;
+        const style=isMine?' style="background:#fef3c7;padding:1px 4px;border-radius:3px;font-weight:700"':'';
+        return `<span${style}>${a.partLabel?partTime(e,a)+': ':''}${nm}${a.isMain?'*':''}</span>`;
+      }).join('<br>　');
+    }).join('<br>');
+    const sbI=als.filter(a=>a.isStandby).map(a=>{
+      const t=data.teachers.find(x=>x.id===a.teacherId);
+      const nm=t?esc(t.code||t.name):'<span style="color:#dc2626">TBC</span>';
+      const isMine=filterId&&a.teacherId===filterId;
+      return isMine?`<span style="background:#fef3c7;padding:1px 4px;border-radius:3px;font-weight:700">${nm}</span>`:nm;
+    }).join(', ');
+    let aI='';
+    if(e.aaRoom){
+      const aa=als.filter(a=>a.venue===e.aaRoom);
+      aI=aa.map(a=>{
+        const t=data.teachers.find(x=>x.id===a.teacherId);
+        const extra=Math.max(0,durMin(e.end,a.end));
+        const xm=extra?` (+${extra}分)`:'';
+        const nm=t?esc(t.code||t.name):'<span style="color:#dc2626">TBC</span>';
+        const isMine=filterId&&a.teacherId===filterId;
+        const style=isMine?' style="background:#fef3c7;padding:1px 4px;border-radius:3px;font-weight:700"':'';
+        return `<span${style}>${partTime(e,a)}${xm}: ${nm}</span>`;
+      }).join('<br>');
+    }
+    const dm=durMin(e.start,e.end);const ds=(Math.floor(dm/60)?Math.floor(dm/60)+'h':'')+(dm%60?(dm%60)+'m':'');
+    html+=`<tr><td>${esc(e.no)}</td><td>${esc(e.level)}</td><td>${esc(e.start)}-${esc(e.end)}</td><td>${esc(e.subject)}</td><td>${ds}</td><td>${esc(e.venues.join(', '))}</td><td>${vI}</td><td>${sbI||'-'}</td><td>${aI||'-'}</td></tr>`;
+  });
+  if(cd)html+='</tbody></table>';
+  if(!list.length)html+='<div class="no-data">'+t('print_no_match')+'</div>';
+  document.getElementById('printView').innerHTML=html;
+}
+
+function openAdmin(){document.getElementById('adminGate').style.display='flex';document.getElementById('adminPass').value='';document.getElementById('adminErr').style.display='none';setTimeout(()=>document.getElementById('adminPass').focus(),50)}
+function closeAdmin(){document.getElementById('adminGate').style.display='none'}
+function checkAdmin(){
+  const p=document.getElementById('adminPass').value;
+  if(p===ADMIN_PASS){closeAdmin();document.getElementById('adminPanel').style.display='flex'}
+  else { const ae=document.getElementById('adminErr'); ae.textContent=t('admin_pwd_err'); ae.style.display='block'; }
+}
+function closeAdminPanel(){document.getElementById('adminPanel').style.display='none'}
+
+function loadJSON(input){
+  const file=input.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=function(e){
+    try{
+      const j=JSON.parse(e.target.result);
+      let d;
+      if(j.data&&j.version){d=j.data}else if(j.config){d=j}else throw new Error(t('alert_format_err'));
+      data=Object.assign({config:{rules:{roles:[],largeRooms:[]}},teachers:[],exams:[],subjects:[],allocation:[]},d);
+      saveData();refreshUI();
+      const ts=j.time?`（${t('alert_export_time')}${new Date(j.time).toLocaleString('zh-HK')}）`:'';
+      let loadMsg=t('alert_loaded')+'\n'+t('wl_teachers')+': '+data.teachers.length+'\n'+t('wl_exams')+': '+data.exams.length+'\n'+t('wl_assignments')+': '+data.allocation.length+'\n'+ts;alert(loadMsg);
+    }catch(err){alert(t('alert_read_fail')+err.message)}
+  };
+  reader.readAsText(file);input.value='';
+}
+
+function applyLoadedData(d,sourceLabel){
+  data=Object.assign({config:{rules:{roles:[],largeRooms:[]}},teachers:[],exams:[],subjects:[],allocation:[]},d);
+  saveData();refreshUI();
+  if(sourceLabel)console.log('[viewer] 已載入資料：'+sourceLabel);
+}
+
+async function tryFetchRemoteData(){
+  try{
+    const res=await fetch('./result.json',{cache:'no-store'});
+    if(!res.ok)return false;
+    const j=await res.json();
+    const d=(j.data&&j.version)?j.data:(j.config?j:null);
+    if(!d)return false;
+    const localTs=+(localStorage.getItem(STORAGE_DATA+'_ts')||0);
+    const remoteTs=j.time?Date.parse(j.time):Date.now();
+    // 遠端較新，或本地無資料 → 採用遠端
+    if(!localStorage.getItem(STORAGE_DATA)||remoteTs>=localTs){
+      applyLoadedData(d,'result.json ('+(j.time||'未知時間')+')');
+      localStorage.setItem(STORAGE_DATA+'_ts',String(remoteTs));
+      return true;
+    }
+    return false;
+  }catch(e){console.warn('[viewer] fetch result.json 失敗：',e.message);return false}
+}
+
+function refreshUI(){
+  document.getElementById('hdrSub').textContent=`${data.config.title||''} · ${t('wl_teachers')} ${data.teachers.length} · ${t('wl_exams')} ${data.exams.length} · ${t('wl_assignments')} ${data.allocation.length}`;
+  fillTeacherSelects();fillLevelSelect();renderResults();renderPrintView();
+}
+
+window.addEventListener('DOMContentLoaded',async()=>{
+  updateLangBtn();
+  applyI18n();
+  const hadLocal=loadData();
+  if(hadLocal)refreshUI();
+  const remoteOk=await tryFetchRemoteData();
+  if(!hadLocal&&!remoteOk){
+    document.getElementById('hdrSub').textContent=t('hdr_sub_load_hint');
+  }
+});
+window.addEventListener('langchange',()=>{
+  renderResults();
+  renderPrintView();
+  fillTeacherSelects();
+  fillLevelSelect();
+  const el=document.getElementById('hdrSub');
+  if(el&&data.teachers.length){
+    el.textContent=`${data.config.title||''} · ${t('wl_teachers')} ${data.teachers.length} · ${t('wl_exams')} ${data.exams.length} · ${t('wl_assignments')} ${data.allocation.length}`;
+  }
+});
+
+// 監聽整個文件的點擊事件（使用事件代理，動態產生的表格也有效）
+document.addEventListener('click', function(e) {
+  // 尋找被點擊元件向上最近的 <tr> 標籤
+  const row = e.target.closest('tr');
+  
+  // 如果點擊的不是表格行，或者點擊的是表頭(th)，就不處理
+  if (!row || row.querySelector('th')) return;
+  
+  // 先檢查當前點擊的這一行是不是本來就已經被選取了
+  const isAlreadySelected = row.classList.contains('selected-row');
+  
+  // 1. 清除頁面上所有其他已經被選取的列（確保同時只能選一個）
+  document.querySelectorAll('tr.selected-row').forEach(r => {
+    r.classList.remove('selected-row');
+  });
+
+  // 2. 如果原本沒有被選取，現在就加上高亮；如果原本就已被選取，上面清除後這裡就不會加上（達成自己取消選取）
+  if (!isAlreadySelected) {
+    row.classList.add('selected-row');
+  }
+});
+</script>
+</body>
+</html>
