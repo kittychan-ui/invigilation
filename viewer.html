@@ -432,6 +432,11 @@ function computeHours(){
     let mins=durMin(a.start,a.end);
     if(a.isStandby){mins=Math.round(mins*((data.config.rules||{}).standbyWorkloadRatio||0.5))}
     else{
+      if(a.isAA){
+        const s1=t2m(a.start),e1=t2m(a.end);let ov=0;
+        data.allocation.forEach(b=>{if(b===a||b.teacherId!==a.teacherId||b.isAA||b.date!==a.date)return;ov+=Math.max(0,Math.min(e1,t2m(b.end))-Math.max(s1,t2m(b.start)))});
+        mins=Math.max(0,mins-ov);
+      }
       const dr=dRules.find(r=>r.date===a.date&&(r.sessions||[]).some(s=>{const e=data.exams.find(x=>x.id===a.examId);return e&&e.session===s}));
       if(dr&&dr.hourMul)mins=Math.round(mins*dr.hourMul);
     }
@@ -509,9 +514,11 @@ function renderResults(){
     const pct=cap>0?Math.min(100,(h/cap)*100):(h/mxV)*100;
     const diff=h-avg;
     const cls=cap>0&&h>=cap?'cap':(Math.abs(diff)>30?'over':'');
-    const cntTotal=data.allocation.filter(a=>a.teacherId===tr.id).length;
-    const cntAA=data.allocation.filter(a=>a.teacherId===tr.id&&a.isAA).length;
-    const cntSB=data.allocation.filter(a=>a.teacherId===tr.id&&a.isStandby).length;
+    const teacherAllocs=data.allocation.filter(a=>a.teacherId===tr.id);
+    const sessKey=a=>{const ex=data.exams.find(x=>x.id===a.examId);return ex?ex.date+'|'+ex.session:a.examId};
+    const cntTotal=new Set(teacherAllocs.map(sessKey)).size;
+    const cntAA=new Set(teacherAllocs.filter(a=>a.isAA).map(sessKey)).size;
+    const cntSB=new Set(teacherAllocs.filter(a=>a.isStandby).map(sessKey)).size;
     const highlight=filterId===tr.id?' style="background:#fef3c7"':'';
     return `<tr${highlight}>
       <td style="text-align:center;color:#94a3b8">${i+1}</td>
