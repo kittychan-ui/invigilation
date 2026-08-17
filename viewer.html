@@ -409,14 +409,25 @@ function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;',
 
 function partTime(e,a){
   if(!e)return a.start+'-'+a.end;
+  const th=(data.config||{}).splitThreshold,ov=(data.config||{}).overlap||0;
   if(a.isStandby||a.part==='full')return e.start+'-'+e.end;
+  if(e&&e.no==='#020'){
+    const mid=Math.round((t2m(e.start)+t2m(e.end))/2);
+    const ext=t2m(e.end)+(+e.aaExtra||0);
+    if(a.part==='part1')return e.start+'-'+m2t(mid);
+    if(a.part==='part2')return m2t(mid-ov)+'-'+m2t(ext);
+  }
+  if(a.part==='part1'&&th)return e.start+'-'+m2t(t2m(e.start)+th);
+  if(a.part==='part2'&&th)return m2t(t2m(e.start)+th-ov)+'-'+e.end;
   if(a.part&&a.part.indexOf('aa')===0)return a.start+'-'+a.end;
   return a.start+'-'+a.end;
 }
 
+function isSaturday(dateStr){return new Date(dateStr+'T00:00:00').getDay()===6;}
 function computeHours(){
   const h={};data.teachers.forEach(t=>h[t.id]=0);
   const dRules=((data.config.rules||{}).dateSessionRules)||[];
+  const satMul=((data.config.rules||{}).satHourMul)||1.0;
   data.allocation.forEach(a=>{
     let mins=durMin(a.start,a.end);
     if(a.isStandby){mins=Math.round(mins*((data.config.rules||{}).standbyWorkloadRatio||0.5))}
@@ -424,6 +435,7 @@ function computeHours(){
       const dr=dRules.find(r=>r.date===a.date&&(r.sessions||[]).some(s=>{const e=data.exams.find(x=>x.id===a.examId);return e&&e.session===s}));
       if(dr&&dr.hourMul)mins=Math.round(mins*dr.hourMul);
     }
+    if(isSaturday(a.date))mins=Math.round(mins*satMul);
     h[a.teacherId]=(h[a.teacherId]||0)+mins;
   });
   return h;
@@ -535,44 +547,67 @@ function renderPrintView(){
     list=list.filter(e=>myExams.has(e.id));
   }
   list.sort((a,b)=>(a.date+a.session+a.start).localeCompare(b.date+b.session+b.start));
-  const filterName=filterId?(data.teachers.find(t=>t.id===filterId)||{}).name:'';
+  const filterName=filterId?(data.teachers.find(x=>x.id===filterId)||{}).name:'';
   let html=`<h3 style="text-align:center;margin:12px 0">${esc(data.config.title||t('print_timetable'))}${filterName?` — ${esc(filterName)}`:''}</h3>`;
   let cd='',cs='';
   list.forEach(e=>{
     if(e.date!==cd||e.session!==cs){if(cd)html+='</tbody></table>';cd=e.date;cs=e.session;html+=`<div class="session-hdr">${esc(e.date)} · Session ${e.session}</div><table><thead><tr><th>${t("print_table_no")}</th><th>Form</th><th>${t("print_table_time")}</th><th>${t("print_table_subject")}</th><th>Dur</th><th>${t("print_table_venue")}</th><th>${t("print_table_inv")}</th><th>SB</th><th>AA</th></tr></thead><tbody>`}
-    const als=data.allocation.filter(a=>a.examId===e.id||(a.mergedExamIds||[]).includes(e.id));
-    const vI=e.venues.map(v=>{
-      const lst=als.filter(a=>a.venue===v).sort((a,b)=>a.start.localeCompare(b.start));
-      if(!lst.length)return `<b>${esc(v)}:</b> <span style="color:#dc2626">${t("print_not_assigned")}</span>`;
-      return `<b>${esc(v)}:</b> `+lst.map(a=>{
-        const t=data.teachers.find(x=>x.id===a.teacherId);
-        const nm=t?esc(t.code||t.name):'<span style="color:#dc2626">TBC</span>';
-        const isMine=filterId&&a.teacherId===filterId;
-        const style=isMine?' style="background:#fef3c7;padding:1px 4px;border-radius:3px;font-weight:700"':'';
-        return `<span${style}>${a.partLabel?partTime(e,a)+': ':''}${nm}${a.isMain?'*':''}</span>`;
-      }).join('<br>　');
-    }).join('<br>');
-    const sbI=als.filter(a=>a.isStandby).map(a=>{
-      const t=data.teachers.find(x=>x.id===a.teacherId);
-      const nm=t?esc(t.code||t.name):'<span style="color:#dc2626">TBC</span>';
-      const isMine=filterId&&a.teacherId===filterId;
-      return isMine?`<span style="background:#fef3c7;padding:1px 4px;border-radius:3px;font-weight:700">${nm}</span>`:nm;
-    }).join(', ');
-    let aI='';
-    if(e.aaRoom){
-      const aa=als.filter(a=>a.venue===e.aaRoom);
-      aI=aa.map(a=>{
-        const t=data.teachers.find(x=>x.id===a.teacherId);
-        const extra=Math.max(0,durMin(e.end,a.end));
-        const xm=extra?` (+${extra}分)`:'';
-        const nm=t?esc(t.code||t.name):'<span style="color:#dc2626">TBC</span>';
-        const isMine=filterId&&a.teacherId===filterId;
-        const style=isMine?' style="background:#fef3c7;padding:1px 4px;border-radius:3px;font-weight:700"':'';
-        return `<span${style}>${partTime(e,a)}${xm}: ${nm}</span>`;
+    const primAls=data.allocation.filter(a=>a.examId===e.id);
+    const sameSlotOthers=data.allocation.filter(a=>{const oe=data.exams.find(x=>x.id===a.examId);return oe && oe.id!==e.id && oe.date===e.date && oe.session===e.session});
+    const isMergedShadow=!primAls.length && (data.allocation.some(a=>(a.mergedExamIds||[]).includes(e.id)) || sameSlotOthers.some(a=>e.venues.includes(a.venue)));
+    let vI,sbI,aI;
+    if(isMergedShadow){
+      vI='<span style="color:#94a3b8">N/A（見同時段考試）</span>';
+      sbI='N/A';
+      aI='N/A';
+    } else {
+      const mergedIdSet=new Set([e.id]);
+      primAls.forEach(a=>(a.mergedExamIds||[]).forEach(id=>mergedIdSet.add(id)));
+      const mergedExams=[...mergedIdSet].map(id=>data.exams.find(x=>x.id===id)).filter(x=>x);
+      const maxEnd=mergedExams.reduce((m,x)=>x.end>m?x.end:m,e.end);
+      const dispE={...e,end:maxEnd};
+      const als=primAls;
+      vI=e.venues.map(v=>{
+        const lst=als.filter(a=>a.venue===v).sort((a,b)=>a.start.localeCompare(b.start));
+        if(!lst.length){
+          const covered=sameSlotOthers.some(a=>a.venue===v);
+          return `<b>${esc(v)}:</b> `+(covered?'<span style="color:#94a3b8">N/A（見同時段考試）</span>':'<span style="color:#94a3b8">-</span>');
+        }
+        const seenSlot=new Set();
+        return `<b>${esc(v)}:</b> `+lst.map(a=>{
+          const slotKey=`${a.part}|${a.start}|${a.end}`;
+          const isFirst=!seenSlot.has(slotKey);
+          if(isFirst)seenSlot.add(slotKey);
+          const sel=data.teachers.find(x=>x.id===a.teacherId);
+          const nm=sel?esc(sel.code||sel.name):'<span style="color:#dc2626">TBC</span>';
+          const isMine=filterId&&a.teacherId===filterId;
+          const style=isMine?' style="background:#fef3c7;padding:1px 4px;border-radius:3px;font-weight:700"':'';
+          return `<span${style}>${partTime(dispE,a)}: ${nm}${isFirst?'*':''}</span>`;
+        }).join('<br>　');
       }).join('<br>');
+      sbI=als.filter(a=>a.isStandby).map(a=>{
+        const sel=data.teachers.find(x=>x.id===a.teacherId);
+        const nm=sel?esc(sel.code||sel.name):'<span style="color:#dc2626">TBC</span>';
+        const isMine=filterId&&a.teacherId===filterId;
+        return isMine?`<span style="background:#fef3c7;padding:1px 4px;border-radius:3px;font-weight:700">${nm}</span>`:nm;
+      }).join(', ')||'-';
+      aI='';
+      if(e.aaRoom){
+        const aa=als.filter(a=>a.venue===e.aaRoom);
+        aI=aa.map(a=>{
+          const sel=data.teachers.find(x=>x.id===a.teacherId);
+          const extra=Math.max(0,durMin(e.end,a.end));
+          const xm=extra?` (+${extra}分)`:'';
+          const nm=sel?esc(sel.code||sel.name):'<span style="color:#dc2626">TBC</span>';
+          const isMine=filterId&&a.teacherId===filterId;
+          const style=isMine?' style="background:#fef3c7;padding:1px 4px;border-radius:3px;font-weight:700"':'';
+          return `<span${style}>${partTime(e,a)}${xm}: ${nm}</span>`;
+        }).join('<br>');
+      }
+      aI=aI||'-';
     }
     const dm=durMin(e.start,e.end);const ds=(Math.floor(dm/60)?Math.floor(dm/60)+'h':'')+(dm%60?(dm%60)+'m':'');
-    html+=`<tr><td>${esc(e.no)}</td><td>${esc(e.level)}</td><td>${esc(e.start)}-${esc(e.end)}</td><td>${esc(e.subject)}</td><td>${ds}</td><td>${esc(e.venues.join(', '))}</td><td>${vI}</td><td>${sbI||'-'}</td><td>${aI||'-'}</td></tr>`;
+    html+=`<tr${isMergedShadow?' style="background:#f8fafc;color:#64748b"':''}><td>${esc(e.no)}</td><td>${esc(e.level)}</td><td>${esc(e.start)}-${esc(e.end)}</td><td>${esc(e.subject)}</td><td>${ds}</td><td>${esc(e.venues.join(', '))}</td><td>${vI}</td><td>${sbI}</td><td>${aI}</td></tr>`;
   });
   if(cd)html+='</tbody></table>';
   if(!list.length)html+='<div class="no-data">'+t('print_no_match')+'</div>';
