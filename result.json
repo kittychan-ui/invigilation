@@ -1,6 +1,6 @@
 {
   "version": "v4",
-  "time": "2026-07-09T02:08:01.644Z",
+  "time": "2026-08-17T10:42:23.519Z",
   "data": {
     "config": {
       "title": "2026-2027 Review Week",
@@ -645,7 +645,7 @@
       },
       {
         "id": "mqt2yca9a72sj",
-        "name": "HO, Wing Rwan (Stephanie)",
+        "name": "HO, Wing Kwan (Stephanie)",
         "cname": "何穎鈞",
         "code": "SH",
         "dept": "Chinese",
@@ -1258,6 +1258,39 @@
         "classTeacher": "3K",
         "isSen": 0,
         "cap": 0
+      },
+      {
+        "id": "mswm8j443s7tl",
+        "name": "Jack Chau",
+        "cname": "",
+        "code": "JaC",
+        "dept": "Student Support Team",
+        "role": "SEN TA",
+        "classTeacher": "",
+        "isSen": 1,
+        "cap": 0
+      },
+      {
+        "id": "mswmav0yd79pn",
+        "name": "Sarah Wallace",
+        "cname": "",
+        "code": "Sarah Wallace",
+        "dept": "Other",
+        "role": "Supply Teacher",
+        "classTeacher": "",
+        "isSen": 1,
+        "cap": 0
+      },
+      {
+        "id": "mswn0bhthufz4",
+        "name": "LO Yat Yee Louie (Louie)",
+        "cname": "",
+        "code": "LL",
+        "dept": "",
+        "role": "Examinations",
+        "classTeacher": "",
+        "isSen": 0,
+        "cap": 0
       }
     ],
     "exams": [
@@ -1649,7 +1682,7 @@
         "session": 1,
         "start": "08:30",
         "end": "12:30",
-        "subject": "Visual Arts (Paper 1/ Paper 2)",
+        "subject": "Visual Arts (Paper 1)",
         "type": "normal",
         "venues": [
           "206"
@@ -3194,28 +3227,17 @@
         "venue": "602AB",
         "part": "part1",
         "partLabel": "上半",
-        "teacherId": "mqt2yca9j11uk",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-24",
-        "start": "08:30",
-        "end": "11:00",
-        "_idx": 0
-      },
-      {
-        "examId": "mqt4qzgf095tk",
-        "venue": "602AB",
-        "part": "part1",
-        "partLabel": "上半",
-        "teacherId": "mqt2yca9nhcqy",
+        "teacherId": "mqt2yca997jzl",
         "isMain": false,
         "isStandby": false,
         "isAA": false,
         "date": "2026-08-24",
         "start": "08:30",
         "end": "10:05",
-        "_idx": 1
+        "mergedExamIds": [
+          "mqt4qzgf095tk"
+        ],
+        "_idx": 0
       },
       {
         "examId": "mqt4qzgf095tk",
@@ -3229,35 +3251,50 @@
         "date": "2026-08-24",
         "start": "08:30",
         "end": "11:00",
-        "_idx": 2
+        "mergedExamIds": [
+          "mqt4qzgf095tk",
+          "mqt4rgsz6w3xk",
+          "mqt4sg44lwivf",
+          "mqt4tt32ffslb",
+          "mqt4tyy7z432c",
+          "mqt4u5r9nj00s"
+        ],
+        "_idx": 1
       },
       {
         "examId": "mqt4qzgf095tk",
         "venue": "601",
         "part": "aa1",
         "partLabel": "AA上",
-        "teacherId": "mqt2yca997jzl",
+        "teacherId": "mqt2yca9gbhhf",
         "isMain": true,
         "isStandby": false,
         "isAA": true,
         "date": "2026-08-24",
         "start": "08:30",
         "end": "10:30",
-        "_idx": 3
+        "mergedExamIds": [
+          "mqt4qzgf095tk",
+          "mqt4tyy7z432c"
+        ],
+        "_idx": 2
       },
       {
         "examId": "mqt4qzgf095tk",
         "venue": "602AB",
         "part": "part2",
         "partLabel": "下半",
-        "teacherId": "mqt2yca9wrln3",
+        "teacherId": "mqt2yca94rj14",
         "isMain": true,
         "isStandby": false,
         "isAA": false,
         "date": "2026-08-24",
         "start": "09:55",
         "end": "11:00",
-        "_idx": 4
+        "mergedExamIds": [
+          "mqt4qzgf095tk"
+        ],
+        "_idx": 3
       },
       {
         "examId": "mqt4qzgf095tk",
@@ -3271,7 +3308,10 @@
         "date": "2026-08-24",
         "start": "09:55",
         "end": "11:00",
-        "_idx": 5
+        "mergedExamIds": [
+          "mqt4qzgf095tk"
+        ],
+        "_idx": 4
       },
       {
         "examId": "mqt4qzgf095tk",
@@ -3285,21 +3325,30 @@
         "date": "2026-08-24",
         "start": "10:20",
         "end": "11:38",
-        "_idx": 6
+        "mergedExamIds": [
+          "mqt4qzgf095tk",
+          "mqt4tyy7z432c"
+        ],
+        "_idx": 5
       },
       {
         "examId": "mqt5z14f5lp1j",
         "venue": "602AB",
         "part": "full",
         "partLabel": "",
-        "teacherId": "mqt2yca99hk46",
+        "teacherId": "mswmav0yd79pn",
         "isMain": true,
         "isStandby": false,
         "isAA": false,
         "date": "2026-08-24",
         "start": "12:45",
         "end": "14:15",
-        "_idx": 7
+        "mergedExamIds": [
+          "mqt5z14f5lp1j",
+          "mqt5zee92uf70",
+          "mqt5zln32gn5r"
+        ],
+        "_idx": 6
       },
       {
         "examId": "mqt5z14f5lp1j",
@@ -3313,21 +3362,29 @@
         "date": "2026-08-24",
         "start": "12:45",
         "end": "14:15",
-        "_idx": 8
+        "mergedExamIds": [
+          "mqt5z14f5lp1j",
+          "mqt5zee92uf70",
+          "mqt5zln32gn5r"
+        ],
+        "_idx": 7
       },
       {
         "examId": "mqt5zee92uf70",
         "venue": "601",
         "part": "aa",
         "partLabel": "AA",
-        "teacherId": "mqt2yca9gbhhf",
+        "teacherId": "mswm8j443s7tl",
         "isMain": true,
         "isStandby": false,
         "isAA": true,
         "date": "2026-08-24",
         "start": "12:45",
         "end": "14:38",
-        "_idx": 9
+        "mergedExamIds": [
+          "mqt5zee92uf70"
+        ],
+        "_idx": 8
       },
       {
         "examId": "mqt5xkpell9y1",
@@ -3341,7 +3398,10 @@
         "date": "2026-08-24",
         "start": "14:30",
         "end": "16:05",
-        "_idx": 10
+        "mergedExamIds": [
+          "mqt5xkpell9y1"
+        ],
+        "_idx": 9
       },
       {
         "examId": "mqt5xkpell9y1",
@@ -3355,7 +3415,10 @@
         "date": "2026-08-24",
         "start": "15:55",
         "end": "16:30",
-        "_idx": 11
+        "mergedExamIds": [
+          "mqt5xkpell9y1"
+        ],
+        "_idx": 10
       },
       {
         "examId": "mqt60chblvpdo",
@@ -3369,7 +3432,10 @@
         "date": "2026-08-25",
         "start": "08:30",
         "end": "10:00",
-        "_idx": 12
+        "mergedExamIds": [
+          "mqt60chblvpdo"
+        ],
+        "_idx": 11
       },
       {
         "examId": "mqt60chblvpdo",
@@ -3383,7 +3449,10 @@
         "date": "2026-08-25",
         "start": "08:30",
         "end": "10:00",
-        "_idx": 13
+        "mergedExamIds": [
+          "mqt60chblvpdo"
+        ],
+        "_idx": 12
       },
       {
         "examId": "mqt60chblvpdo",
@@ -3397,7 +3466,10 @@
         "date": "2026-08-25",
         "start": "08:30",
         "end": "10:00",
-        "_idx": 14
+        "mergedExamIds": [
+          "mqt60chblvpdo"
+        ],
+        "_idx": 13
       },
       {
         "examId": "mqt60chblvpdo",
@@ -3411,7 +3483,10 @@
         "date": "2026-08-25",
         "start": "08:30",
         "end": "10:24",
-        "_idx": 15
+        "mergedExamIds": [
+          "mqt60chblvpdo"
+        ],
+        "_idx": 14
       },
       {
         "examId": "mqt60w1a6lpus",
@@ -3425,7 +3500,10 @@
         "date": "2026-08-25",
         "start": "11:00",
         "end": "12:35",
-        "_idx": 16
+        "mergedExamIds": [
+          "mqt60w1a6lpus"
+        ],
+        "_idx": 15
       },
       {
         "examId": "mqt60w1a6lpus",
@@ -3439,7 +3517,10 @@
         "date": "2026-08-25",
         "start": "11:00",
         "end": "12:35",
-        "_idx": 17
+        "mergedExamIds": [
+          "mqt60w1a6lpus"
+        ],
+        "_idx": 16
       },
       {
         "examId": "mqt60w1a6lpus",
@@ -3453,7 +3534,10 @@
         "date": "2026-08-25",
         "start": "11:00",
         "end": "13:00",
-        "_idx": 18
+        "mergedExamIds": [
+          "mqt60w1a6lpus"
+        ],
+        "_idx": 17
       },
       {
         "examId": "mqt60w1a6lpus",
@@ -3467,7 +3551,10 @@
         "date": "2026-08-25",
         "start": "11:00",
         "end": "13:00",
-        "_idx": 19
+        "mergedExamIds": [
+          "mqt60w1a6lpus"
+        ],
+        "_idx": 18
       },
       {
         "examId": "mqt60w1a6lpus",
@@ -3481,7 +3568,10 @@
         "date": "2026-08-25",
         "start": "12:25",
         "end": "13:00",
-        "_idx": 20
+        "mergedExamIds": [
+          "mqt60w1a6lpus"
+        ],
+        "_idx": 19
       },
       {
         "examId": "mqt60w1a6lpus",
@@ -3495,7 +3585,10 @@
         "date": "2026-08-25",
         "start": "12:25",
         "end": "13:00",
-        "_idx": 21
+        "mergedExamIds": [
+          "mqt60w1a6lpus"
+        ],
+        "_idx": 20
       },
       {
         "examId": "mqt60w1a6lpus",
@@ -3509,7 +3602,10 @@
         "date": "2026-08-25",
         "start": "12:50",
         "end": "13:30",
-        "_idx": 22
+        "mergedExamIds": [
+          "mqt60w1a6lpus"
+        ],
+        "_idx": 21
       },
       {
         "examId": "mqt61uj1zbemy",
@@ -3523,7 +3619,10 @@
         "date": "2026-08-25",
         "start": "14:30",
         "end": "16:00",
-        "_idx": 23
+        "mergedExamIds": [
+          "mqt61uj1zbemy"
+        ],
+        "_idx": 22
       },
       {
         "examId": "mqt61uj1zbemy",
@@ -3537,7 +3636,10 @@
         "date": "2026-08-25",
         "start": "14:30",
         "end": "16:00",
-        "_idx": 24
+        "mergedExamIds": [
+          "mqt61uj1zbemy"
+        ],
+        "_idx": 23
       },
       {
         "examId": "mqt61uj1zbemy",
@@ -3551,7 +3653,10 @@
         "date": "2026-08-25",
         "start": "14:30",
         "end": "16:30",
-        "_idx": 25
+        "mergedExamIds": [
+          "mqt61uj1zbemy"
+        ],
+        "_idx": 24
       },
       {
         "examId": "mqt61uj1zbemy",
@@ -3565,7 +3670,10 @@
         "date": "2026-08-25",
         "start": "16:20",
         "end": "16:33",
-        "_idx": 26
+        "mergedExamIds": [
+          "mqt61uj1zbemy"
+        ],
+        "_idx": 25
       },
       {
         "examId": "mqt62j8f8352g",
@@ -3573,27 +3681,16 @@
         "part": "part1",
         "partLabel": "上半",
         "teacherId": "mqt2yca9wb6rr",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-26",
-        "start": "08:30",
-        "end": "11:30",
-        "_idx": 27
-      },
-      {
-        "examId": "mqt62j8f8352g",
-        "venue": "602AB",
-        "part": "part1",
-        "partLabel": "上半",
-        "teacherId": "mqt2yca97081t",
         "isMain": false,
         "isStandby": false,
         "isAA": false,
         "date": "2026-08-26",
         "start": "08:30",
         "end": "10:05",
-        "_idx": 28
+        "mergedExamIds": [
+          "mqt62j8f8352g"
+        ],
+        "_idx": 26
       },
       {
         "examId": "mqt64tcez1xpk",
@@ -3607,7 +3704,10 @@
         "date": "2026-08-26",
         "start": "08:30",
         "end": "10:05",
-        "_idx": 29
+        "mergedExamIds": [
+          "mqt64tcez1xpk"
+        ],
+        "_idx": 27
       },
       {
         "examId": "mqt62j8f8352g",
@@ -3620,8 +3720,17 @@
         "isAA": false,
         "date": "2026-08-26",
         "start": "08:30",
-        "end": "13:15",
-        "_idx": 30
+        "end": "12:30",
+        "mergedExamIds": [
+          "mqt62j8f8352g",
+          "mqt62skx1x1s1",
+          "mqt6351ibv856",
+          "mqt63shktq8x5",
+          "mqt6443kkack0",
+          "mqt64dqgvbaf1",
+          "mqt64tcez1xpk"
+        ],
+        "_idx": 28
       },
       {
         "examId": "mqt6351ibv856",
@@ -3635,7 +3744,12 @@
         "date": "2026-08-26",
         "start": "08:30",
         "end": "10:30",
-        "_idx": 31
+        "mergedExamIds": [
+          "mqt6351ibv856",
+          "mqt63shktq8x5",
+          "mqt64dqgvbaf1"
+        ],
+        "_idx": 29
       },
       {
         "examId": "mqt64tcez1xpk",
@@ -3649,7 +3763,10 @@
         "date": "2026-08-26",
         "start": "08:30",
         "end": "10:30",
-        "_idx": 32
+        "mergedExamIds": [
+          "mqt64tcez1xpk"
+        ],
+        "_idx": 30
       },
       {
         "examId": "mqt62j8f8352g",
@@ -3663,7 +3780,10 @@
         "date": "2026-08-26",
         "start": "09:55",
         "end": "11:00",
-        "_idx": 33
+        "mergedExamIds": [
+          "mqt62j8f8352g"
+        ],
+        "_idx": 31
       },
       {
         "examId": "mqt62j8f8352g",
@@ -3677,7 +3797,10 @@
         "date": "2026-08-26",
         "start": "09:55",
         "end": "11:00",
-        "_idx": 34
+        "mergedExamIds": [
+          "mqt62j8f8352g"
+        ],
+        "_idx": 32
       },
       {
         "examId": "mqt64tcez1xpk",
@@ -3691,7 +3814,10 @@
         "date": "2026-08-26",
         "start": "09:55",
         "end": "12:30",
-        "_idx": 35
+        "mergedExamIds": [
+          "mqt64tcez1xpk"
+        ],
+        "_idx": 33
       },
       {
         "examId": "mqt6351ibv856",
@@ -3705,7 +3831,12 @@
         "date": "2026-08-26",
         "start": "10:20",
         "end": "12:15",
-        "_idx": 36
+        "mergedExamIds": [
+          "mqt6351ibv856",
+          "mqt63shktq8x5",
+          "mqt64dqgvbaf1"
+        ],
+        "_idx": 34
       },
       {
         "examId": "mqt64tcez1xpk",
@@ -3719,7 +3850,10 @@
         "date": "2026-08-26",
         "start": "10:20",
         "end": "12:41",
-        "_idx": 37
+        "mergedExamIds": [
+          "mqt64tcez1xpk"
+        ],
+        "_idx": 35
       },
       {
         "examId": "mqt65i14hbhaa",
@@ -3733,7 +3867,13 @@
         "date": "2026-08-26",
         "start": "11:45",
         "end": "13:15",
-        "_idx": 38
+        "mergedExamIds": [
+          "mqt65i14hbhaa",
+          "mqt65rf7k5dsi",
+          "mqt667e5oersl",
+          "mqt66l2wjatbi"
+        ],
+        "_idx": 36
       },
       {
         "examId": "mqt66l2wjatbi",
@@ -3747,21 +3887,27 @@
         "date": "2026-08-26",
         "start": "11:45",
         "end": "13:19",
-        "_idx": 39
+        "mergedExamIds": [
+          "mqt66l2wjatbi"
+        ],
+        "_idx": 37
       },
       {
         "examId": "mqt676nl5xp7q",
         "venue": "602AB",
         "part": "part1",
         "partLabel": "上半",
-        "teacherId": "mqt2yca9ychso",
+        "teacherId": "mswmav0yd79pn",
         "isMain": true,
         "isStandby": false,
         "isAA": false,
         "date": "2026-08-26",
         "start": "14:00",
         "end": "15:35",
-        "_idx": 40
+        "mergedExamIds": [
+          "mqt676nl5xp7q"
+        ],
+        "_idx": 38
       },
       {
         "examId": "mqt67ksfeg0fs",
@@ -3775,7 +3921,10 @@
         "date": "2026-08-26",
         "start": "14:00",
         "end": "15:35",
-        "_idx": 41
+        "mergedExamIds": [
+          "mqt67ksfeg0fs"
+        ],
+        "_idx": 39
       },
       {
         "examId": "mqt676nl5xp7q",
@@ -3789,7 +3938,11 @@
         "date": "2026-08-26",
         "start": "14:00",
         "end": "16:30",
-        "_idx": 42
+        "mergedExamIds": [
+          "mqt676nl5xp7q",
+          "mqt67ksfeg0fs"
+        ],
+        "_idx": 40
       },
       {
         "examId": "mqt676nl5xp7q",
@@ -3803,21 +3956,27 @@
         "date": "2026-08-26",
         "start": "14:00",
         "end": "16:00",
-        "_idx": 43
+        "mergedExamIds": [
+          "mqt676nl5xp7q"
+        ],
+        "_idx": 41
       },
       {
         "examId": "mqt676nl5xp7q",
         "venue": "602AB",
         "part": "part2",
         "partLabel": "下半",
-        "teacherId": "mqt2yca9uji2d",
+        "teacherId": "mswmav0yd79pn",
         "isMain": true,
         "isStandby": false,
         "isAA": false,
         "date": "2026-08-26",
         "start": "15:25",
         "end": "16:00",
-        "_idx": 44
+        "mergedExamIds": [
+          "mqt676nl5xp7q"
+        ],
+        "_idx": 42
       },
       {
         "examId": "mqt67ksfeg0fs",
@@ -3831,7 +3990,10 @@
         "date": "2026-08-26",
         "start": "15:25",
         "end": "16:30",
-        "_idx": 45
+        "mergedExamIds": [
+          "mqt67ksfeg0fs"
+        ],
+        "_idx": 43
       },
       {
         "examId": "mqt676nl5xp7q",
@@ -3845,7 +4007,10 @@
         "date": "2026-08-26",
         "start": "15:50",
         "end": "16:30",
-        "_idx": 46
+        "mergedExamIds": [
+          "mqt676nl5xp7q"
+        ],
+        "_idx": 44
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -3859,7 +4024,10 @@
         "date": "2026-08-27",
         "start": "08:30",
         "end": "10:05",
-        "_idx": 47
+        "mergedExamIds": [
+          "mqz9v3rmzwswm"
+        ],
+        "_idx": 45
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -3873,21 +4041,27 @@
         "date": "2026-08-27",
         "start": "08:30",
         "end": "10:05",
-        "_idx": 48
+        "mergedExamIds": [
+          "mqz9v3rmzwswm"
+        ],
+        "_idx": 46
       },
       {
         "examId": "mqz9v3rmzwswm",
         "venue": "(Standby)",
         "part": "standby",
         "partLabel": "後備",
-        "teacherId": "mqt2yca9hl0zn",
+        "teacherId": "mqt2yca9yy3zz",
         "isMain": false,
         "isStandby": true,
         "isAA": false,
         "date": "2026-08-27",
         "start": "08:30",
         "end": "10:45",
-        "_idx": 49
+        "mergedExamIds": [
+          "mqz9v3rmzwswm"
+        ],
+        "_idx": 47
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -3901,7 +4075,10 @@
         "date": "2026-08-27",
         "start": "08:30",
         "end": "10:30",
-        "_idx": 50
+        "mergedExamIds": [
+          "mqz9v3rmzwswm"
+        ],
+        "_idx": 48
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -3915,7 +4092,10 @@
         "date": "2026-08-27",
         "start": "09:55",
         "end": "10:45",
-        "_idx": 51
+        "mergedExamIds": [
+          "mqz9v3rmzwswm"
+        ],
+        "_idx": 49
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -3929,21 +4109,27 @@
         "date": "2026-08-27",
         "start": "09:55",
         "end": "10:45",
-        "_idx": 52
+        "mergedExamIds": [
+          "mqz9v3rmzwswm"
+        ],
+        "_idx": 50
       },
       {
         "examId": "mqz9v3rmzwswm",
         "venue": "601",
         "part": "aa2",
         "partLabel": "AA下",
-        "teacherId": "mqt2yca9luu4l",
+        "teacherId": "mqt2yca9l9tnh",
         "isMain": true,
         "isStandby": false,
         "isAA": true,
         "date": "2026-08-27",
         "start": "10:20",
         "end": "11:20",
-        "_idx": 53
+        "mergedExamIds": [
+          "mqz9v3rmzwswm"
+        ],
+        "_idx": 51
       },
       {
         "examId": "mqz9w3u7y4bxj",
@@ -3957,7 +4143,10 @@
         "date": "2026-08-27",
         "start": "11:30",
         "end": "12:45",
-        "_idx": 54
+        "mergedExamIds": [
+          "mqz9w3u7y4bxj"
+        ],
+        "_idx": 52
       },
       {
         "examId": "mqz9w3u7y4bxj",
@@ -3971,7 +4160,10 @@
         "date": "2026-08-27",
         "start": "11:30",
         "end": "12:45",
-        "_idx": 55
+        "mergedExamIds": [
+          "mqz9w3u7y4bxj"
+        ],
+        "_idx": 53
       },
       {
         "examId": "mqz9w3u7y4bxj",
@@ -3985,91 +4177,112 @@
         "date": "2026-08-27",
         "start": "11:30",
         "end": "12:45",
-        "_idx": 56
+        "mergedExamIds": [
+          "mqz9w3u7y4bxj"
+        ],
+        "_idx": 54
       },
       {
         "examId": "mqz9w3u7y4bxj",
         "venue": "601",
         "part": "aa",
         "partLabel": "AA",
-        "teacherId": "mqt2yca9qcod5",
+        "teacherId": "mswn0bhthufz4",
         "isMain": true,
         "isStandby": false,
         "isAA": true,
         "date": "2026-08-27",
         "start": "11:30",
         "end": "13:04",
-        "_idx": 57
+        "mergedExamIds": [
+          "mqz9w3u7y4bxj"
+        ],
+        "_idx": 55
       },
       {
         "examId": "mqz9wqjuh8ly4",
         "venue": "602AB",
         "part": "part1",
         "partLabel": "上半",
-        "teacherId": "",
+        "teacherId": "mswmav0yd79pn",
         "isMain": true,
         "isStandby": false,
         "isAA": false,
         "date": "2026-08-27",
         "start": "14:30",
         "end": "16:05",
-        "_idx": 58
+        "mergedExamIds": [
+          "mqz9wqjuh8ly4"
+        ],
+        "_idx": 56
       },
       {
         "examId": "mqz9wqjuh8ly4",
         "venue": "(Standby)",
         "part": "standby",
         "partLabel": "後備",
-        "teacherId": "",
+        "teacherId": "mswn0bhthufz4",
         "isMain": false,
         "isStandby": true,
         "isAA": false,
         "date": "2026-08-27",
         "start": "14:30",
         "end": "16:45",
-        "_idx": 59
+        "mergedExamIds": [
+          "mqz9wqjuh8ly4"
+        ],
+        "_idx": 57
       },
       {
         "examId": "mqz9wqjuh8ly4",
         "venue": "601",
         "part": "aa1",
         "partLabel": "AA上",
-        "teacherId": "",
+        "teacherId": "mswm8j443s7tl",
         "isMain": true,
         "isStandby": false,
         "isAA": true,
         "date": "2026-08-27",
         "start": "14:30",
         "end": "16:30",
-        "_idx": 60
+        "mergedExamIds": [
+          "mqz9wqjuh8ly4"
+        ],
+        "_idx": 58
       },
       {
         "examId": "mqz9wqjuh8ly4",
         "venue": "602AB",
         "part": "part2",
         "partLabel": "下半",
-        "teacherId": "",
+        "teacherId": "mswmav0yd79pn",
         "isMain": true,
         "isStandby": false,
         "isAA": false,
         "date": "2026-08-27",
         "start": "15:55",
         "end": "16:45",
-        "_idx": 61
+        "mergedExamIds": [
+          "mqz9wqjuh8ly4"
+        ],
+        "_idx": 59
       },
       {
         "examId": "mqz9wqjuh8ly4",
         "venue": "601",
         "part": "aa2",
         "partLabel": "AA下",
-        "teacherId": "",
+        "teacherId": "mswm8j443s7tl",
         "isMain": true,
         "isStandby": false,
         "isAA": true,
         "date": "2026-08-27",
         "start": "16:20",
         "end": "17:34",
-        "_idx": 62
+        "mergedExamIds": [
+          "mqz9wqjuh8ly4"
+        ],
+        "_idx": 60
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4083,7 +4296,12 @@
         "date": "2026-08-28",
         "start": "08:30",
         "end": "11:00",
-        "_idx": 63
+        "mergedExamIds": [
+          "mqz9xebvpu88p",
+          "mqz9xmwma2wro",
+          "mqz9y1wwfe4g3"
+        ],
+        "_idx": 61
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4097,21 +4315,30 @@
         "date": "2026-08-28",
         "start": "08:30",
         "end": "11:00",
-        "_idx": 64
+        "mergedExamIds": [
+          "mqz9xebvpu88p",
+          "mqz9xmwma2wro",
+          "mqz9y1wwfe4g3"
+        ],
+        "_idx": 62
       },
       {
         "examId": "mqz9xebvpu88p",
         "venue": "601",
         "part": "aa1",
         "partLabel": "AA上",
-        "teacherId": "mqt2yca997jzl",
+        "teacherId": "mqt2yca9tjyv4",
         "isMain": true,
         "isStandby": false,
         "isAA": true,
         "date": "2026-08-28",
         "start": "08:30",
         "end": "10:30",
-        "_idx": 65
+        "mergedExamIds": [
+          "mqz9xebvpu88p",
+          "mqz9xmwma2wro"
+        ],
+        "_idx": 63
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4125,21 +4352,28 @@
         "date": "2026-08-28",
         "start": "09:55",
         "end": "10:45",
-        "_idx": 66
+        "mergedExamIds": [
+          "mqz9xebvpu88p"
+        ],
+        "_idx": 64
       },
       {
         "examId": "mqz9xebvpu88p",
         "venue": "601",
         "part": "aa2",
         "partLabel": "AA下",
-        "teacherId": "mqt2yca9t6bws",
+        "teacherId": "mqt2yca997jzl",
         "isMain": true,
         "isStandby": false,
         "isAA": true,
         "date": "2026-08-28",
         "start": "10:20",
         "end": "11:34",
-        "_idx": 67
+        "mergedExamIds": [
+          "mqz9xebvpu88p",
+          "mqz9xmwma2wro"
+        ],
+        "_idx": 65
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4153,7 +4387,10 @@
         "date": "2026-08-28",
         "start": "11:30",
         "end": "13:05",
-        "_idx": 68
+        "mergedExamIds": [
+          "mqz9ym6jiwkja"
+        ],
+        "_idx": 66
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4167,7 +4404,10 @@
         "date": "2026-08-28",
         "start": "11:30",
         "end": "13:15",
-        "_idx": 69
+        "mergedExamIds": [
+          "mqz9ym6jiwkja"
+        ],
+        "_idx": 67
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4181,7 +4421,10 @@
         "date": "2026-08-28",
         "start": "11:30",
         "end": "13:30",
-        "_idx": 70
+        "mergedExamIds": [
+          "mqz9ym6jiwkja"
+        ],
+        "_idx": 68
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4195,21 +4438,27 @@
         "date": "2026-08-28",
         "start": "12:55",
         "end": "13:15",
-        "_idx": 71
+        "mergedExamIds": [
+          "mqz9ym6jiwkja"
+        ],
+        "_idx": 69
       },
       {
         "examId": "mqz9ym6jiwkja",
         "venue": "601",
         "part": "aa2",
         "partLabel": "AA下",
-        "teacherId": "mqt2yca9qcod5",
+        "teacherId": "mqt2yca9gbhhf",
         "isMain": true,
         "isStandby": false,
         "isAA": true,
         "date": "2026-08-28",
         "start": "13:20",
         "end": "13:41",
-        "_idx": 72
+        "mergedExamIds": [
+          "mqz9ym6jiwkja"
+        ],
+        "_idx": 70
       },
       {
         "examId": "mqz9zkk1ctglp",
@@ -4223,7 +4472,10 @@
         "date": "2026-08-28",
         "start": "14:30",
         "end": "16:05",
-        "_idx": 73
+        "mergedExamIds": [
+          "mqz9zkk1ctglp"
+        ],
+        "_idx": 71
       },
       {
         "examId": "mqz9zkk1ctglp",
@@ -4237,7 +4489,10 @@
         "date": "2026-08-28",
         "start": "15:55",
         "end": "16:30",
-        "_idx": 74
+        "mergedExamIds": [
+          "mqz9zkk1ctglp"
+        ],
+        "_idx": 72
       },
       {
         "examId": "mqza092vvcb94",
@@ -4251,35 +4506,44 @@
         "date": "2026-08-29",
         "start": "08:30",
         "end": "10:05",
-        "_idx": 75
+        "mergedExamIds": [
+          "mqza092vvcb94"
+        ],
+        "_idx": 73
       },
       {
         "examId": "mqza092vvcb94",
         "venue": "602AB",
         "part": "part1",
         "partLabel": "上半",
-        "teacherId": "mqt2yca9iprhh",
+        "teacherId": "mqt2yca94h60u",
         "isMain": false,
         "isStandby": false,
         "isAA": false,
         "date": "2026-08-29",
         "start": "08:30",
         "end": "10:05",
-        "_idx": 76
+        "mergedExamIds": [
+          "mqza092vvcb94"
+        ],
+        "_idx": 74
       },
       {
         "examId": "mqza092vvcb94",
         "venue": "(Standby)",
         "part": "standby",
         "partLabel": "後備",
-        "teacherId": "mqt2yca94h60u",
+        "teacherId": "mqt2yca9iprhh",
         "isMain": false,
         "isStandby": true,
         "isAA": false,
         "date": "2026-08-29",
         "start": "08:30",
         "end": "10:30",
-        "_idx": 77
+        "mergedExamIds": [
+          "mqza092vvcb94"
+        ],
+        "_idx": 75
       },
       {
         "examId": "mqza092vvcb94",
@@ -4293,7 +4557,10 @@
         "date": "2026-08-29",
         "start": "08:30",
         "end": "10:30",
-        "_idx": 78
+        "mergedExamIds": [
+          "mqza092vvcb94"
+        ],
+        "_idx": 76
       },
       {
         "examId": "mqza092vvcb94",
@@ -4307,21 +4574,27 @@
         "date": "2026-08-29",
         "start": "09:55",
         "end": "10:30",
-        "_idx": 79
+        "mergedExamIds": [
+          "mqza092vvcb94"
+        ],
+        "_idx": 77
       },
       {
         "examId": "mqza092vvcb94",
         "venue": "602AB",
         "part": "part2",
         "partLabel": "下半",
-        "teacherId": "mqt2yca9iprhh",
+        "teacherId": "mqt2yca94h60u",
         "isMain": false,
         "isStandby": false,
         "isAA": false,
         "date": "2026-08-29",
         "start": "09:55",
         "end": "10:30",
-        "_idx": 80
+        "mergedExamIds": [
+          "mqza092vvcb94"
+        ],
+        "_idx": 78
       },
       {
         "examId": "mqza092vvcb94",
@@ -4335,7 +4608,10 @@
         "date": "2026-08-29",
         "start": "10:20",
         "end": "10:49",
-        "_idx": 81
+        "mergedExamIds": [
+          "mqza092vvcb94"
+        ],
+        "_idx": 79
       },
       {
         "examId": "mqza0orpx0zb9",
@@ -4349,49 +4625,61 @@
         "date": "2026-08-29",
         "start": "11:30",
         "end": "12:30",
-        "_idx": 82
+        "mergedExamIds": [
+          "mqza0orpx0zb9"
+        ],
+        "_idx": 80
       },
       {
         "examId": "mqza0orpx0zb9",
         "venue": "602AB",
         "part": "full",
         "partLabel": "",
-        "teacherId": "mqt2yca9vtel9",
+        "teacherId": "mqt2yca94h60u",
         "isMain": false,
         "isStandby": false,
         "isAA": false,
         "date": "2026-08-29",
         "start": "11:30",
         "end": "12:30",
-        "_idx": 83
+        "mergedExamIds": [
+          "mqza0orpx0zb9"
+        ],
+        "_idx": 81
       },
       {
         "examId": "mqza0orpx0zb9",
         "venue": "(Standby)",
         "part": "standby",
         "partLabel": "後備",
-        "teacherId": "mqt2yca94h60u",
+        "teacherId": "mqt2yca9vtel9",
         "isMain": false,
         "isStandby": true,
         "isAA": false,
         "date": "2026-08-29",
         "start": "11:30",
         "end": "12:30",
-        "_idx": 84
+        "mergedExamIds": [
+          "mqza0orpx0zb9"
+        ],
+        "_idx": 82
       },
       {
         "examId": "mqza0orpx0zb9",
         "venue": "601",
         "part": "aa",
         "partLabel": "AA",
-        "teacherId": "mqt2yca9tjyv4",
+        "teacherId": "mqt2yca9qcod5",
         "isMain": true,
         "isStandby": false,
         "isAA": true,
         "date": "2026-08-29",
         "start": "11:30",
         "end": "12:45",
-        "_idx": 85
+        "mergedExamIds": [
+          "mqza0orpx0zb9"
+        ],
+        "_idx": 83
       },
       {
         "examId": "mqt65i14hbhaa",
@@ -4404,7 +4692,40 @@
         "isAA": false,
         "date": "2026-08-26",
         "start": "11:45",
-        "end": "12:45",
+        "end": "13:15",
+        "mergedExamIds": [
+          "mqt65rf7k5dsi",
+          "mqt667e5oersl",
+          "mqt66l2wjatbi"
+        ],
+        "_idx": 84
+      },
+      {
+        "examId": "mqt62j8f8352g",
+        "venue": "602AB",
+        "part": "part1",
+        "partLabel": "上半",
+        "teacherId": "mqt2yca97081t",
+        "isMain": false,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-26",
+        "start": "08:30",
+        "end": "10:05",
+        "_idx": 85
+      },
+      {
+        "examId": "mqt4qzgf095tk",
+        "venue": "602AB",
+        "part": "part1",
+        "partLabel": "上半",
+        "teacherId": "mqt2yca9j11uk",
+        "isMain": false,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-24",
+        "start": "08:30",
+        "end": "10:05",
         "_idx": 86
       }
     ]
