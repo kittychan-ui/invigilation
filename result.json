@@ -1,6 +1,6 @@
 {
   "version": "v4",
-  "time": "2026-08-17T10:42:23.519Z",
+  "time": "2026-08-18T10:31:31.797Z",
   "data": {
     "config": {
       "title": "2026-2027 Review Week",
@@ -333,7 +333,8 @@
         "role": "LT-DP",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "K1"
       },
       {
         "id": "mqt2yca9vtel9",
@@ -344,7 +345,8 @@
         "role": "LT-DP",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "K1"
       },
       {
         "id": "mqt2yca9bmx8n",
@@ -355,7 +357,8 @@
         "role": "LT-AP",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "K1"
       },
       {
         "id": "mqt2yca94eoul",
@@ -366,7 +369,8 @@
         "role": "LT-AP",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "K1"
       },
       {
         "id": "mqt2yca9j11uk",
@@ -377,7 +381,8 @@
         "role": "",
         "classTeacher": "2A",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "A4"
       },
       {
         "id": "mqt2yca9wb6rr",
@@ -388,7 +393,8 @@
         "role": "HOD-PE",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "G1"
       },
       {
         "id": "mqt2yca9tjyv4",
@@ -399,7 +405,8 @@
         "role": "TA",
         "classTeacher": "",
         "isSen": 1,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "I4"
       },
       {
         "id": "mqt2yca9uji2d",
@@ -410,7 +417,8 @@
         "role": "",
         "classTeacher": "6C",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "F3"
       },
       {
         "id": "mqt2yca9jfds5",
@@ -421,7 +429,8 @@
         "role": "",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "A8"
       },
       {
         "id": "mqt2yca9zgouc",
@@ -432,7 +441,8 @@
         "role": "TA",
         "classTeacher": "",
         "isSen": 1,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "H8"
       },
       {
         "id": "mqt2yca98zfk0",
@@ -443,7 +453,8 @@
         "role": "",
         "classTeacher": "4Y",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "A7"
       },
       {
         "id": "mqt2yca9trlk2",
@@ -454,7 +465,8 @@
         "role": "HOT",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "I1"
       },
       {
         "id": "mqt2yca9s09u2",
@@ -465,7 +477,8 @@
         "role": "DHOD-CH",
         "classTeacher": "1H",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "A2"
       },
       {
         "id": "mqt2yca94h60u",
@@ -476,7 +489,8 @@
         "role": "",
         "classTeacher": "3K",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "A6"
       },
       {
         "id": "mqt2yca9fcige",
@@ -487,7 +501,8 @@
         "role": "",
         "classTeacher": "2A",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "A9"
       },
       {
         "id": "mqt2yca9j9sc2",
@@ -498,7 +513,8 @@
         "role": "",
         "classTeacher": "3Y",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "B4"
       },
       {
         "id": "mqt2yca9gt6cp",
@@ -509,7 +525,8 @@
         "role": "",
         "classTeacher": "4M",
         "isSen": 1,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "B5"
       },
       {
         "id": "mqt2yca9qcod5",
@@ -520,7 +537,8 @@
         "role": "HOSEN",
         "classTeacher": "",
         "isSen": 1,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "J1"
       },
       {
         "id": "mqt2yca9n8irs",
@@ -531,7 +549,8 @@
         "role": "HOV-F2",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "B6"
       },
       {
         "id": "mqt2yca9pxpy9",
@@ -542,7 +561,8 @@
         "role": "",
         "classTeacher": "5K",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "B7"
       },
       {
         "id": "mqt2yca9mv7oy",
@@ -553,7 +573,8 @@
         "role": "HOV-F2",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "E3"
       },
       {
         "id": "mqt2yca933tsh",
@@ -564,7 +585,8 @@
         "role": "HOD-BT",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "D1"
       },
       {
         "id": "mqt2yca9e8vbj",
@@ -575,7 +597,8 @@
         "role": "",
         "classTeacher": "1A",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "B9"
       },
       {
         "id": "mqt2yca97i1op",
@@ -586,7 +609,8 @@
         "role": "",
         "classTeacher": "6Y",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "B10"
       },
       {
         "id": "mqt2yca9bh3fx",
@@ -597,7 +621,8 @@
         "role": "",
         "classTeacher": "1C",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "C4"
       },
       {
         "id": "mqt2yca9qejlr",
@@ -608,7 +633,8 @@
         "role": "HOD-MA",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "C1"
       },
       {
         "id": "mqt2yca9nl9u2",
@@ -619,7 +645,8 @@
         "role": "",
         "classTeacher": "5M",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "C6"
       },
       {
         "id": "mqt2yca9jcm4y",
@@ -630,7 +657,8 @@
         "role": "",
         "classTeacher": "1Y",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "C7"
       },
       {
         "id": "mqt2yca9gvxmr",
@@ -641,7 +669,8 @@
         "role": "",
         "classTeacher": "3M",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "C8"
       },
       {
         "id": "mqt2yca9a72sj",
@@ -652,7 +681,8 @@
         "role": "HOV-F1",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "C3"
       },
       {
         "id": "mqt2yca9scp3d",
@@ -663,7 +693,8 @@
         "role": "",
         "classTeacher": "1Y",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "C9"
       },
       {
         "id": "mqt2yca9wrln3",
@@ -674,7 +705,8 @@
         "role": "",
         "classTeacher": "5C",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "C10"
       },
       {
         "id": "mqt2yca9yy3zz",
@@ -685,7 +717,8 @@
         "role": "HOSD",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "E2"
       },
       {
         "id": "mqt2yca9v4cup",
@@ -696,7 +729,8 @@
         "role": "HOV-F3",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "G3"
       },
       {
         "id": "mqt2yca9tijkx",
@@ -707,7 +741,8 @@
         "role": "DHOV-F3",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "B3"
       },
       {
         "id": "mqt2yca9s98ac",
@@ -718,7 +753,8 @@
         "role": "DHOD-MA",
         "classTeacher": "5H",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "C2"
       },
       {
         "id": "mqt2yca9u931y",
@@ -729,7 +765,8 @@
         "role": "DHOECA",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "G2"
       },
       {
         "id": "mqt2yca9z3ord",
@@ -740,7 +777,8 @@
         "role": "",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "D2"
       },
       {
         "id": "mqt2yca9rvlr2",
@@ -751,7 +789,8 @@
         "role": "",
         "classTeacher": "2H",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "D5"
       },
       {
         "id": "mqt2yca94qtz2",
@@ -762,7 +801,8 @@
         "role": "",
         "classTeacher": "3C",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "D6"
       },
       {
         "id": "mqt2yca9hplke",
@@ -773,7 +813,8 @@
         "role": "",
         "classTeacher": "3C",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "D7"
       },
       {
         "id": "mqt2yca9mwd1l",
@@ -784,7 +825,8 @@
         "role": "HOV-F5",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "I3"
       },
       {
         "id": "mqt2yca9tqwx3",
@@ -795,7 +837,8 @@
         "role": "",
         "classTeacher": "3Y",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "D8"
       },
       {
         "id": "mqt2yca92tyoh",
@@ -806,7 +849,8 @@
         "role": "",
         "classTeacher": "2M",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "D9"
       },
       {
         "id": "mqt2yca99cbuf",
@@ -828,7 +872,8 @@
         "role": "",
         "classTeacher": "2K",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "D10"
       },
       {
         "id": "mqt2yca9um5bj",
@@ -839,7 +884,8 @@
         "role": "TA",
         "classTeacher": "1M",
         "isSen": 1,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "H7"
       },
       {
         "id": "mqt2yca930501",
@@ -850,7 +896,8 @@
         "role": "",
         "classTeacher": "1H",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "E4"
       },
       {
         "id": "mqt2yca9n12q9",
@@ -861,7 +908,8 @@
         "role": "HOSD",
         "classTeacher": "2K",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "F2"
       },
       {
         "id": "mqt2yca9iprhh",
@@ -872,7 +920,8 @@
         "role": "DHOD-A",
         "classTeacher": "6M",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "I2"
       },
       {
         "id": "mqt2yca9l9tnh",
@@ -883,7 +932,8 @@
         "role": "TA",
         "classTeacher": "",
         "isSen": 1,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "I7"
       },
       {
         "id": "mqt2yca9wg4p9",
@@ -894,7 +944,8 @@
         "role": "HOV-F1",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "D3"
       },
       {
         "id": "mqt2yca9nyx6u",
@@ -905,7 +956,8 @@
         "role": "HOD-EN",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "B1"
       },
       {
         "id": "mqt2yca9f4bj6",
@@ -916,7 +968,8 @@
         "role": "",
         "classTeacher": "3H",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "E6"
       },
       {
         "id": "mqt2yca9t6bws",
@@ -927,7 +980,8 @@
         "role": "EAL",
         "classTeacher": "1A",
         "isSen": 1,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "E7"
       },
       {
         "id": "mqt2yca9gxp95",
@@ -938,7 +992,8 @@
         "role": "",
         "classTeacher": "3A",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "E8"
       },
       {
         "id": "mqt2yca9dk8np",
@@ -949,7 +1004,8 @@
         "role": "",
         "classTeacher": "6K",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "E9"
       },
       {
         "id": "mqt2yca99hk46",
@@ -960,7 +1016,8 @@
         "role": "",
         "classTeacher": "4C",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "E10"
       },
       {
         "id": "mqt2yca9glte4",
@@ -971,7 +1028,8 @@
         "role": "",
         "classTeacher": "6H",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "F4"
       },
       {
         "id": "mqt2yca9nhcqy",
@@ -982,7 +1040,8 @@
         "role": "",
         "classTeacher": "5Y",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "F5"
       },
       {
         "id": "mqt2yca9ychso",
@@ -993,7 +1052,8 @@
         "role": "DHOD-EN",
         "classTeacher": "1K",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "B2"
       },
       {
         "id": "mqt2yca9hyxd0",
@@ -1004,7 +1064,8 @@
         "role": "",
         "classTeacher": "6A",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "F6"
       },
       {
         "id": "mqt2yca9m1hn9",
@@ -1015,7 +1076,8 @@
         "role": "DHOECA",
         "classTeacher": "4H",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "H2"
       },
       {
         "id": "mqt2yca94rj14",
@@ -1026,7 +1088,8 @@
         "role": "",
         "classTeacher": "3H",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "F7"
       },
       {
         "id": "mqt2yca96zfk1",
@@ -1037,7 +1100,8 @@
         "role": "",
         "classTeacher": "2C",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "F8"
       },
       {
         "id": "mqt2yca90ml60",
@@ -1048,7 +1112,8 @@
         "role": "HOD-CH",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "A1"
       },
       {
         "id": "mqt2yca97081t",
@@ -1059,7 +1124,8 @@
         "role": "",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "F9"
       },
       {
         "id": "mqt2yca9abz1a",
@@ -1070,7 +1136,8 @@
         "role": "",
         "classTeacher": "2C",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "J2"
       },
       {
         "id": "mqt2yca991mj7",
@@ -1081,7 +1148,8 @@
         "role": "",
         "classTeacher": "4A",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "F10"
       },
       {
         "id": "mqt2yca9nry2p",
@@ -1092,7 +1160,8 @@
         "role": "Examinations",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "K4"
       },
       {
         "id": "mqt2yca9g56qy",
@@ -1103,7 +1172,8 @@
         "role": "",
         "classTeacher": "1K",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "G4"
       },
       {
         "id": "mqt2yca95q6bp",
@@ -1114,7 +1184,8 @@
         "role": "",
         "classTeacher": "3A",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "G5"
       },
       {
         "id": "mqt2yca9f2gk3",
@@ -1125,7 +1196,8 @@
         "role": "HOV-F6",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "H3"
       },
       {
         "id": "mqt2yca923mzr",
@@ -1136,7 +1208,8 @@
         "role": "HOD-CA",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "E1"
       },
       {
         "id": "mqt2yca9uzs44",
@@ -1147,7 +1220,8 @@
         "role": "",
         "classTeacher": "2M",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "G6"
       },
       {
         "id": "mqt2yca9yel1q",
@@ -1158,7 +1232,8 @@
         "role": "HOD-HU",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "F1"
       },
       {
         "id": "mqt2yca9s6u9v",
@@ -1169,7 +1244,8 @@
         "role": "HOV-F4",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "H3"
       },
       {
         "id": "mqt2yca9vcl53",
@@ -1180,7 +1256,8 @@
         "role": "",
         "classTeacher": "4K",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "G7"
       },
       {
         "id": "mqt2yca997jzl",
@@ -1191,7 +1268,8 @@
         "role": "",
         "classTeacher": "",
         "isSen": 1,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "G8"
       },
       {
         "id": "mqt2yca9luu4l",
@@ -1202,7 +1280,8 @@
         "role": "TA",
         "classTeacher": "1C",
         "isSen": 1,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "H6"
       },
       {
         "id": "mqt2yca9hl0zn",
@@ -1213,7 +1292,8 @@
         "role": "",
         "classTeacher": "5A",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "G10"
       },
       {
         "id": "mqt2yca926ejr",
@@ -1224,7 +1304,8 @@
         "role": "HOD-SC",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "H1"
       },
       {
         "id": "mqt2yca908ncx",
@@ -1235,7 +1316,8 @@
         "role": "TA",
         "classTeacher": "3M",
         "isSen": 1,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "H4"
       },
       {
         "id": "mqt2yca9gbhhf",
@@ -1246,7 +1328,8 @@
         "role": "TA",
         "classTeacher": "2Y",
         "isSen": 1,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "I8"
       },
       {
         "id": "mqt2yca9tzdaf",
@@ -1257,7 +1340,8 @@
         "role": "",
         "classTeacher": "3K",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "A10"
       },
       {
         "id": "mswm8j443s7tl",
@@ -1271,23 +1355,24 @@
         "cap": 0
       },
       {
-        "id": "mswmav0yd79pn",
-        "name": "Sarah Wallace",
-        "cname": "",
-        "code": "Sarah Wallace",
-        "dept": "Other",
-        "role": "Supply Teacher",
-        "classTeacher": "",
-        "isSen": 1,
-        "cap": 0
-      },
-      {
         "id": "mswn0bhthufz4",
         "name": "LO Yat Yee Louie (Louie)",
         "cname": "",
         "code": "LL",
         "dept": "",
         "role": "Examinations",
+        "classTeacher": "",
+        "isSen": 0,
+        "cap": 0,
+        "pigeonhole": "J5"
+      },
+      {
+        "id": "msyeujm9tjaa1",
+        "name": "Sally Hui",
+        "cname": "",
+        "code": "SaH",
+        "dept": "",
+        "role": "",
         "classTeacher": "",
         "isSen": 0,
         "cap": 0
@@ -1990,8 +2075,8 @@
         "perRoom": 2,
         "standby": 1,
         "aaRoom": "601",
-        "aaExtra": 16,
-        "aaExtra2": 19,
+        "aaExtra": 19,
+        "aaExtra2": 0,
         "aaExtra3": 0
       },
       {
@@ -2012,6 +2097,26 @@
         "aaRoom": "601",
         "aaExtra": 14,
         "aaExtra2": 15,
+        "aaExtra3": 0
+      },
+      {
+        "id": "msyf3em0ses7j",
+        "no": "#033",
+        "level": "F.6 DSE",
+        "date": "2026-08-29",
+        "session": 1,
+        "start": "08:30",
+        "end": "11:03",
+        "subject": "E English Paper 3 (Listening and Integrated Skills)",
+        "type": "listening",
+        "venues": [
+          "605"
+        ],
+        "perRoom": 1,
+        "standby": 1,
+        "aaRoom": "",
+        "aaExtra": 0,
+        "aaExtra2": 0,
         "aaExtra3": 0
       }
     ],
@@ -3336,7 +3441,7 @@
         "venue": "602AB",
         "part": "full",
         "partLabel": "",
-        "teacherId": "mswmav0yd79pn",
+        "teacherId": "mqt2yca94eoul",
         "isMain": true,
         "isStandby": false,
         "isAA": false,
@@ -3680,6 +3785,28 @@
         "venue": "602AB",
         "part": "part1",
         "partLabel": "上半",
+        "teacherId": "mqt2yca97081t",
+        "isMain": true,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-26",
+        "start": "08:30",
+        "end": "11:30",
+        "mergedExamIds": [
+          "mqt62j8f8352g",
+          "mqt62skx1x1s1",
+          "mqt6351ibv856",
+          "mqt63shktq8x5",
+          "mqt6443kkack0",
+          "mqt64dqgvbaf1"
+        ],
+        "_idx": 26
+      },
+      {
+        "examId": "mqt62j8f8352g",
+        "venue": "602AB",
+        "part": "part1",
+        "partLabel": "上半",
         "teacherId": "mqt2yca9wb6rr",
         "isMain": false,
         "isStandby": false,
@@ -3690,7 +3817,7 @@
         "mergedExamIds": [
           "mqt62j8f8352g"
         ],
-        "_idx": 26
+        "_idx": 27
       },
       {
         "examId": "mqt64tcez1xpk",
@@ -3707,7 +3834,7 @@
         "mergedExamIds": [
           "mqt64tcez1xpk"
         ],
-        "_idx": 27
+        "_idx": 28
       },
       {
         "examId": "mqt62j8f8352g",
@@ -3730,7 +3857,7 @@
           "mqt64dqgvbaf1",
           "mqt64tcez1xpk"
         ],
-        "_idx": 28
+        "_idx": 29
       },
       {
         "examId": "mqt6351ibv856",
@@ -3749,7 +3876,7 @@
           "mqt63shktq8x5",
           "mqt64dqgvbaf1"
         ],
-        "_idx": 29
+        "_idx": 30
       },
       {
         "examId": "mqt64tcez1xpk",
@@ -3766,7 +3893,7 @@
         "mergedExamIds": [
           "mqt64tcez1xpk"
         ],
-        "_idx": 30
+        "_idx": 31
       },
       {
         "examId": "mqt62j8f8352g",
@@ -3783,7 +3910,7 @@
         "mergedExamIds": [
           "mqt62j8f8352g"
         ],
-        "_idx": 31
+        "_idx": 32
       },
       {
         "examId": "mqt62j8f8352g",
@@ -3800,7 +3927,7 @@
         "mergedExamIds": [
           "mqt62j8f8352g"
         ],
-        "_idx": 32
+        "_idx": 33
       },
       {
         "examId": "mqt64tcez1xpk",
@@ -3817,7 +3944,7 @@
         "mergedExamIds": [
           "mqt64tcez1xpk"
         ],
-        "_idx": 33
+        "_idx": 34
       },
       {
         "examId": "mqt6351ibv856",
@@ -3836,7 +3963,7 @@
           "mqt63shktq8x5",
           "mqt64dqgvbaf1"
         ],
-        "_idx": 34
+        "_idx": 35
       },
       {
         "examId": "mqt64tcez1xpk",
@@ -3853,7 +3980,7 @@
         "mergedExamIds": [
           "mqt64tcez1xpk"
         ],
-        "_idx": 35
+        "_idx": 36
       },
       {
         "examId": "mqt65i14hbhaa",
@@ -3873,7 +4000,7 @@
           "mqt667e5oersl",
           "mqt66l2wjatbi"
         ],
-        "_idx": 36
+        "_idx": 37
       },
       {
         "examId": "mqt66l2wjatbi",
@@ -3889,23 +4016,6 @@
         "end": "13:19",
         "mergedExamIds": [
           "mqt66l2wjatbi"
-        ],
-        "_idx": 37
-      },
-      {
-        "examId": "mqt676nl5xp7q",
-        "venue": "602AB",
-        "part": "part1",
-        "partLabel": "上半",
-        "teacherId": "mswmav0yd79pn",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-26",
-        "start": "14:00",
-        "end": "15:35",
-        "mergedExamIds": [
-          "mqt676nl5xp7q"
         ],
         "_idx": 38
       },
@@ -3928,24 +4038,6 @@
       },
       {
         "examId": "mqt676nl5xp7q",
-        "venue": "(Standby)",
-        "part": "standby",
-        "partLabel": "後備",
-        "teacherId": "mqt2yca9glte4",
-        "isMain": false,
-        "isStandby": true,
-        "isAA": false,
-        "date": "2026-08-26",
-        "start": "14:00",
-        "end": "16:30",
-        "mergedExamIds": [
-          "mqt676nl5xp7q",
-          "mqt67ksfeg0fs"
-        ],
-        "_idx": 40
-      },
-      {
-        "examId": "mqt676nl5xp7q",
         "venue": "601",
         "part": "aa1",
         "partLabel": "AA上",
@@ -3959,24 +4051,7 @@
         "mergedExamIds": [
           "mqt676nl5xp7q"
         ],
-        "_idx": 41
-      },
-      {
-        "examId": "mqt676nl5xp7q",
-        "venue": "602AB",
-        "part": "part2",
-        "partLabel": "下半",
-        "teacherId": "mswmav0yd79pn",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-26",
-        "start": "15:25",
-        "end": "16:00",
-        "mergedExamIds": [
-          "mqt676nl5xp7q"
-        ],
-        "_idx": 42
+        "_idx": 40
       },
       {
         "examId": "mqt67ksfeg0fs",
@@ -3993,7 +4068,7 @@
         "mergedExamIds": [
           "mqt67ksfeg0fs"
         ],
-        "_idx": 43
+        "_idx": 41
       },
       {
         "examId": "mqt676nl5xp7q",
@@ -4010,7 +4085,7 @@
         "mergedExamIds": [
           "mqt676nl5xp7q"
         ],
-        "_idx": 44
+        "_idx": 42
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4027,7 +4102,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 45
+        "_idx": 43
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4044,7 +4119,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 46
+        "_idx": 44
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4061,7 +4136,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 47
+        "_idx": 45
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4078,7 +4153,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 48
+        "_idx": 46
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4095,7 +4170,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 49
+        "_idx": 47
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4112,7 +4187,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 50
+        "_idx": 48
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4129,7 +4204,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 51
+        "_idx": 49
       },
       {
         "examId": "mqz9w3u7y4bxj",
@@ -4146,14 +4221,14 @@
         "mergedExamIds": [
           "mqz9w3u7y4bxj"
         ],
-        "_idx": 52
+        "_idx": 50
       },
       {
         "examId": "mqz9w3u7y4bxj",
         "venue": "602AB",
         "part": "full",
         "partLabel": "",
-        "teacherId": "mqt2yca94eoul",
+        "teacherId": "mswn0bhthufz4",
         "isMain": false,
         "isStandby": false,
         "isAA": false,
@@ -4163,7 +4238,7 @@
         "mergedExamIds": [
           "mqz9w3u7y4bxj"
         ],
-        "_idx": 53
+        "_idx": 51
       },
       {
         "examId": "mqz9w3u7y4bxj",
@@ -4180,14 +4255,14 @@
         "mergedExamIds": [
           "mqz9w3u7y4bxj"
         ],
-        "_idx": 54
+        "_idx": 52
       },
       {
         "examId": "mqz9w3u7y4bxj",
         "venue": "601",
         "part": "aa",
         "partLabel": "AA",
-        "teacherId": "mswn0bhthufz4",
+        "teacherId": "mswm8j443s7tl",
         "isMain": true,
         "isStandby": false,
         "isAA": true,
@@ -4197,24 +4272,7 @@
         "mergedExamIds": [
           "mqz9w3u7y4bxj"
         ],
-        "_idx": 55
-      },
-      {
-        "examId": "mqz9wqjuh8ly4",
-        "venue": "602AB",
-        "part": "part1",
-        "partLabel": "上半",
-        "teacherId": "mswmav0yd79pn",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-27",
-        "start": "14:30",
-        "end": "16:05",
-        "mergedExamIds": [
-          "mqz9wqjuh8ly4"
-        ],
-        "_idx": 56
+        "_idx": 53
       },
       {
         "examId": "mqz9wqjuh8ly4",
@@ -4231,7 +4289,7 @@
         "mergedExamIds": [
           "mqz9wqjuh8ly4"
         ],
-        "_idx": 57
+        "_idx": 54
       },
       {
         "examId": "mqz9wqjuh8ly4",
@@ -4248,24 +4306,7 @@
         "mergedExamIds": [
           "mqz9wqjuh8ly4"
         ],
-        "_idx": 58
-      },
-      {
-        "examId": "mqz9wqjuh8ly4",
-        "venue": "602AB",
-        "part": "part2",
-        "partLabel": "下半",
-        "teacherId": "mswmav0yd79pn",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-27",
-        "start": "15:55",
-        "end": "16:45",
-        "mergedExamIds": [
-          "mqz9wqjuh8ly4"
-        ],
-        "_idx": 59
+        "_idx": 55
       },
       {
         "examId": "mqz9wqjuh8ly4",
@@ -4282,7 +4323,7 @@
         "mergedExamIds": [
           "mqz9wqjuh8ly4"
         ],
-        "_idx": 60
+        "_idx": 56
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4301,7 +4342,7 @@
           "mqz9xmwma2wro",
           "mqz9y1wwfe4g3"
         ],
-        "_idx": 61
+        "_idx": 57
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4320,7 +4361,7 @@
           "mqz9xmwma2wro",
           "mqz9y1wwfe4g3"
         ],
-        "_idx": 62
+        "_idx": 58
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4338,7 +4379,7 @@
           "mqz9xebvpu88p",
           "mqz9xmwma2wro"
         ],
-        "_idx": 63
+        "_idx": 59
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4355,7 +4396,7 @@
         "mergedExamIds": [
           "mqz9xebvpu88p"
         ],
-        "_idx": 64
+        "_idx": 60
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4373,7 +4414,7 @@
           "mqz9xebvpu88p",
           "mqz9xmwma2wro"
         ],
-        "_idx": 65
+        "_idx": 61
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4390,7 +4431,7 @@
         "mergedExamIds": [
           "mqz9ym6jiwkja"
         ],
-        "_idx": 66
+        "_idx": 62
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4407,7 +4448,7 @@
         "mergedExamIds": [
           "mqz9ym6jiwkja"
         ],
-        "_idx": 67
+        "_idx": 63
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4424,7 +4465,7 @@
         "mergedExamIds": [
           "mqz9ym6jiwkja"
         ],
-        "_idx": 68
+        "_idx": 64
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4441,7 +4482,7 @@
         "mergedExamIds": [
           "mqz9ym6jiwkja"
         ],
-        "_idx": 69
+        "_idx": 65
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4458,7 +4499,7 @@
         "mergedExamIds": [
           "mqz9ym6jiwkja"
         ],
-        "_idx": 70
+        "_idx": 66
       },
       {
         "examId": "mqz9zkk1ctglp",
@@ -4475,7 +4516,7 @@
         "mergedExamIds": [
           "mqz9zkk1ctglp"
         ],
-        "_idx": 71
+        "_idx": 67
       },
       {
         "examId": "mqz9zkk1ctglp",
@@ -4492,126 +4533,7 @@
         "mergedExamIds": [
           "mqz9zkk1ctglp"
         ],
-        "_idx": 72
-      },
-      {
-        "examId": "mqza092vvcb94",
-        "venue": "602AB",
-        "part": "part1",
-        "partLabel": "上半",
-        "teacherId": "mqt2yca9vtel9",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-29",
-        "start": "08:30",
-        "end": "10:05",
-        "mergedExamIds": [
-          "mqza092vvcb94"
-        ],
-        "_idx": 73
-      },
-      {
-        "examId": "mqza092vvcb94",
-        "venue": "602AB",
-        "part": "part1",
-        "partLabel": "上半",
-        "teacherId": "mqt2yca94h60u",
-        "isMain": false,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-29",
-        "start": "08:30",
-        "end": "10:05",
-        "mergedExamIds": [
-          "mqza092vvcb94"
-        ],
-        "_idx": 74
-      },
-      {
-        "examId": "mqza092vvcb94",
-        "venue": "(Standby)",
-        "part": "standby",
-        "partLabel": "後備",
-        "teacherId": "mqt2yca9iprhh",
-        "isMain": false,
-        "isStandby": true,
-        "isAA": false,
-        "date": "2026-08-29",
-        "start": "08:30",
-        "end": "10:30",
-        "mergedExamIds": [
-          "mqza092vvcb94"
-        ],
-        "_idx": 75
-      },
-      {
-        "examId": "mqza092vvcb94",
-        "venue": "601",
-        "part": "aa1",
-        "partLabel": "AA上",
-        "teacherId": "mqt2yca9tjyv4",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": true,
-        "date": "2026-08-29",
-        "start": "08:30",
-        "end": "10:30",
-        "mergedExamIds": [
-          "mqza092vvcb94"
-        ],
-        "_idx": 76
-      },
-      {
-        "examId": "mqza092vvcb94",
-        "venue": "602AB",
-        "part": "part2",
-        "partLabel": "下半",
-        "teacherId": "mqt2yca9vtel9",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-29",
-        "start": "09:55",
-        "end": "10:30",
-        "mergedExamIds": [
-          "mqza092vvcb94"
-        ],
-        "_idx": 77
-      },
-      {
-        "examId": "mqza092vvcb94",
-        "venue": "602AB",
-        "part": "part2",
-        "partLabel": "下半",
-        "teacherId": "mqt2yca94h60u",
-        "isMain": false,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-29",
-        "start": "09:55",
-        "end": "10:30",
-        "mergedExamIds": [
-          "mqza092vvcb94"
-        ],
-        "_idx": 78
-      },
-      {
-        "examId": "mqza092vvcb94",
-        "venue": "601",
-        "part": "aa2",
-        "partLabel": "AA下",
-        "teacherId": "mqt2yca9tjyv4",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": true,
-        "date": "2026-08-29",
-        "start": "10:20",
-        "end": "10:49",
-        "mergedExamIds": [
-          "mqza092vvcb94"
-        ],
-        "_idx": 79
+        "_idx": 68
       },
       {
         "examId": "mqza0orpx0zb9",
@@ -4628,14 +4550,14 @@
         "mergedExamIds": [
           "mqza0orpx0zb9"
         ],
-        "_idx": 80
+        "_idx": 69
       },
       {
         "examId": "mqza0orpx0zb9",
         "venue": "602AB",
         "part": "full",
         "partLabel": "",
-        "teacherId": "mqt2yca94h60u",
+        "teacherId": "mqt2yca9iprhh",
         "isMain": false,
         "isStandby": false,
         "isAA": false,
@@ -4645,7 +4567,7 @@
         "mergedExamIds": [
           "mqza0orpx0zb9"
         ],
-        "_idx": 81
+        "_idx": 70
       },
       {
         "examId": "mqza0orpx0zb9",
@@ -4662,14 +4584,14 @@
         "mergedExamIds": [
           "mqza0orpx0zb9"
         ],
-        "_idx": 82
+        "_idx": 71
       },
       {
         "examId": "mqza0orpx0zb9",
         "venue": "601",
         "part": "aa",
         "partLabel": "AA",
-        "teacherId": "mqt2yca9qcod5",
+        "teacherId": "mqt2yca94h60u",
         "isMain": true,
         "isStandby": false,
         "isAA": true,
@@ -4679,7 +4601,7 @@
         "mergedExamIds": [
           "mqza0orpx0zb9"
         ],
-        "_idx": 83
+        "_idx": 72
       },
       {
         "examId": "mqt65i14hbhaa",
@@ -4698,21 +4620,121 @@
           "mqt667e5oersl",
           "mqt66l2wjatbi"
         ],
-        "_idx": 84
+        "_idx": 73
       },
       {
-        "examId": "mqt62j8f8352g",
-        "venue": "602AB",
-        "part": "part1",
-        "partLabel": "上半",
-        "teacherId": "mqt2yca97081t",
+        "examId": "mqt676nl5xp7q",
+        "venue": "(Standby)",
+        "part": "standby",
+        "partLabel": "後備",
+        "teacherId": "mqt2yca9glte4",
         "isMain": false,
+        "isStandby": true,
+        "isAA": false,
+        "date": "2026-08-26",
+        "start": "14:00",
+        "end": "16:00",
+        "mergedExamIds": [],
+        "_idx": 74
+      },
+      {
+        "examId": "mqt676nl5xp7q",
+        "venue": "602AB",
+        "part": "full",
+        "partLabel": "",
+        "teacherId": "mswm8j443s7tl",
+        "isMain": true,
         "isStandby": false,
         "isAA": false,
         "date": "2026-08-26",
+        "start": "14:00",
+        "end": "16:00",
+        "_idx": 75
+      },
+      {
+        "examId": "mqza092vvcb94",
+        "venue": "602AB",
+        "part": "full",
+        "partLabel": "",
+        "teacherId": "mqt2yca9vtel9",
+        "isMain": true,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-29",
         "start": "08:30",
-        "end": "10:05",
-        "_idx": 85
+        "end": "10:30",
+        "_idx": 76
+      },
+      {
+        "examId": "mqza092vvcb94",
+        "venue": "602AB",
+        "part": "full",
+        "partLabel": "",
+        "teacherId": "mqt2yca94h60u",
+        "isMain": false,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-29",
+        "start": "08:30",
+        "end": "10:30",
+        "_idx": 77
+      },
+      {
+        "examId": "mqza092vvcb94",
+        "venue": "601",
+        "part": "aa1",
+        "partLabel": "AA",
+        "teacherId": "mqt2yca9tjyv4",
+        "isMain": false,
+        "isStandby": false,
+        "isAA": true,
+        "date": "2026-08-29",
+        "start": "08:30",
+        "end": "10:49",
+        "_idx": 78
+      },
+      {
+        "examId": "msyf3em0ses7j",
+        "venue": "605",
+        "part": "full",
+        "partLabel": "",
+        "teacherId": "mqt2yca9qcod5",
+        "isMain": true,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-29",
+        "start": "08:30",
+        "end": "11:03",
+        "_idx": 79
+      },
+      {
+        "examId": "mqza092vvcb94",
+        "venue": "(Standby)",
+        "part": "standby",
+        "partLabel": "後備",
+        "teacherId": "mqt2yca9iprhh",
+        "isMain": false,
+        "isStandby": true,
+        "isAA": false,
+        "date": "2026-08-29",
+        "start": "08:30",
+        "end": "10:30",
+        "mergedExamIds": [],
+        "_idx": 80
+      },
+      {
+        "examId": "mqz9wqjuh8ly4",
+        "venue": "602AB",
+        "part": "full",
+        "partLabel": "",
+        "teacherId": "msyeujm9tjaa1",
+        "isMain": true,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-27",
+        "start": "14:30",
+        "end": "16:45",
+        "_idx": 81
       },
       {
         "examId": "mqt4qzgf095tk",
@@ -4726,7 +4748,7 @@
         "date": "2026-08-24",
         "start": "08:30",
         "end": "10:05",
-        "_idx": 86
+        "_idx": 82
       }
     ]
   }
