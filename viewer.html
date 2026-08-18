@@ -424,20 +424,46 @@ function partTime(e,a){
 }
 
 function isSaturday(dateStr){return new Date(dateStr+'T00:00:00').getDay()===6;}
+// 依 a.examId + a.part 反推實際應計時長（不受合併後 a.start/a.end 被拉長影響）
+function slotMins(a,e){
+  if(!e)return durMin(a.start,a.end);
+  const th=(data.config||{}).splitThreshold,ov=(data.config||{}).overlap||0;
+  const aaTh=((data.config.rules||{}).aaSplitThreshold)||120;
+  const part=a.part||'full';
+  if(part==='part1')return th?Math.min(th,durMin(e.start,e.end)):durMin(e.start,e.end);
+  if(part==='part2'){const p1=t2m(e.start)+th;const p2=Math.max(0,p1-ov);return t2m(e.end)-p2;}
+  if(part==='full'){
+    let d=durMin(e.start,e.end);
+    if(e.aaRoom&&a.venue===e.aaRoom&&(e.aaExtra||0))d=durMin(e.start,m2t(t2m(e.end)+(e.aaExtra||0)));
+    return d;
+  }
+  const aaM=part.match(/^aa([12])(.*)$/);
+  if(aaM){
+    const ek=aaM[2];
+    const ev=ek==='2'?(e.aaExtra2||0):ek==='3'?(e.aaExtra3||0):(e.aaExtra||0);
+    if(!ev)return durMin(a.start,a.end);
+    const aaEndMin=t2m(e.end)+ev;
+    const total=durMin(e.start,m2t(aaEndMin));
+    if(aaM[1]==='1')return Math.min(aaTh,total);
+    if(aaM[1]==='2'){const p1=t2m(e.start)+aaTh;const p2=Math.max(0,p1-ov);return aaEndMin-p2;}
+  }
+  return durMin(a.start,a.end);
+}
 function computeHours(){
   const h={};data.teachers.forEach(t=>h[t.id]=0);
   const dRules=((data.config.rules||{}).dateSessionRules)||[];
   const satMul=((data.config.rules||{}).satHourMul)||1.0;
   data.allocation.forEach(a=>{
-    let mins=durMin(a.start,a.end);
+    const e=data.exams.find(x=>x.id===a.examId);
+    let mins=slotMins(a,e);
     if(a.isStandby){mins=Math.round(mins*((data.config.rules||{}).standbyWorkloadRatio||0.5))}
     else{
       if(a.isAA){
-        const s1=t2m(a.start),e1=t2m(a.end);let ov=0;
+        const s1=t2m(e?e.start:a.start),e1=t2m(e?e.end:a.end)+(e?(e.aaExtra||e.aaExtra2||e.aaExtra3||0):0);let ov=0;
         data.allocation.forEach(b=>{if(b===a||b.teacherId!==a.teacherId||b.isAA||b.date!==a.date)return;ov+=Math.max(0,Math.min(e1,t2m(b.end))-Math.max(s1,t2m(b.start)))});
         mins=Math.max(0,mins-ov);
       }
-      const dr=dRules.find(r=>r.date===a.date&&(r.sessions||[]).some(s=>{const e=data.exams.find(x=>x.id===a.examId);return e&&e.session===s}));
+      const dr=dRules.find(r=>r.date===a.date&&(r.sessions||[]).some(s=>{return e&&e.session===s}));
       if(dr&&dr.hourMul)mins=Math.round(mins*dr.hourMul);
     }
     if(isSaturday(a.date))mins=Math.round(mins*satMul);
