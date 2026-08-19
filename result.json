@@ -1,6 +1,6 @@
 {
   "version": "v4",
-  "time": "2026-08-18T10:31:31.797Z",
+  "time": "2026-08-19T06:05:09.384Z",
   "data": {
     "config": {
       "title": "2026-2027 Review Week",
@@ -322,7 +322,8 @@
         "role": "LT-P",
         "classTeacher": "",
         "isSen": 0,
-        "cap": 0
+        "cap": 0,
+        "pigeonhole": "K1"
       },
       {
         "id": "mqt2yca9izwll",
@@ -358,7 +359,7 @@
         "classTeacher": "",
         "isSen": 0,
         "cap": 0,
-        "pigeonhole": "K1"
+        "pigeonhole": ""
       },
       {
         "id": "mqt2yca94eoul",
@@ -662,7 +663,7 @@
       },
       {
         "id": "mqt2yca9gvxmr",
-        "name": "GUBUNG, Sipas",
+        "name": "GURUNG, Sijan",
         "cname": "古龍斯正",
         "code": "SIG",
         "dept": "Science",
@@ -746,7 +747,7 @@
       },
       {
         "id": "mqt2yca9s98ac",
-        "name": "KIM, Setryoung (Serra)",
+        "name": "KIM, Serryoung  (Serra)",
         "cname": "金抒璐",
         "code": "SK",
         "dept": "Mathematics",
@@ -1177,7 +1178,7 @@
       },
       {
         "id": "mqt2yca95q6bp",
-        "name": "WANG, Yinben (Julia)",
+        "name": "WANG, Yizhou (Julia)",
         "cname": "汪逸舟",
         "code": "JW",
         "dept": "Chinese",
