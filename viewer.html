@@ -587,27 +587,25 @@ function renderPrintView(){
     if(e.date!==cd||e.session!==cs){if(cd)html+='</tbody></table>';cd=e.date;cs=e.session;html+=`<div class="session-hdr">${esc(e.date)} · Session ${e.session}</div><table><thead><tr><th>${t("print_table_no")}</th><th>Form</th><th>${t("print_table_time")}</th><th>${t("print_table_subject")}</th><th>Dur</th><th>${t("print_table_venue")}</th><th>${t("print_table_inv")}</th><th>SB</th><th>AA</th></tr></thead><tbody>`}
     const primAls=data.allocation.filter(a=>a.examId===e.id);
     const sameSlotOthers=data.allocation.filter(a=>{const oe=data.exams.find(x=>x.id===a.examId);return oe && oe.id!==e.id && oe.date===e.date && oe.session===e.session});
-    const isMergedShadow=!primAls.length && (data.allocation.some(a=>(a.mergedExamIds||[]).includes(e.id)) || sameSlotOthers.some(a=>e.venues.includes(a.venue)));
+    const isMergedShadow=!primAls.length && (data.allocation.some(a=>(a.mergedExamIds||[]).includes(e.id)&&e.venues.includes(a.venue)) || sameSlotOthers.some(a=>e.venues.includes(a.venue)));
     let vI,sbI,aI;
     if(isMergedShadow){
       vI='<span style="color:#94a3b8">N/A（見同時段考試）</span>';
       sbI='N/A';
       aI='N/A';
     } else {
-      const mergedIdSet=new Set([e.id]);
-      primAls.forEach(a=>(a.mergedExamIds||[]).forEach(id=>mergedIdSet.add(id)));
-      const mergedExams=[...mergedIdSet].map(id=>data.exams.find(x=>x.id===id)).filter(x=>x);
-      const maxEnd=mergedExams.reduce((m,x)=>x.end>m?x.end:m,e.end);
-      const dispE={...e,end:maxEnd};
+      const roomMaxEnd=(v)=>data.exams.filter(x=>x.date===e.date&&x.session===e.session&&x.venues.includes(v)).reduce((m,x)=>x.end>m?x.end:m,e.end);
       const als=primAls;
       vI=e.venues.map(v=>{
         const lst=als.filter(a=>a.venue===v).sort((a,b)=>a.start.localeCompare(b.start));
+        const pfx=e.venues.length>1?`<b>${esc(v)}:</b> `:'';
         if(!lst.length){
           const covered=sameSlotOthers.some(a=>a.venue===v);
-          return `<b>${esc(v)}:</b> `+(covered?'<span style="color:#94a3b8">N/A（見同時段考試）</span>':'<span style="color:#94a3b8">-</span>');
+          return pfx+(covered?'<span style="color:#94a3b8">N/A（見同時段考試）</span>':'<span style="color:#94a3b8">-</span>');
         }
         const seenSlot=new Set();
-        return `<b>${esc(v)}:</b> `+lst.map(a=>{
+        const dispE={...e,end:roomMaxEnd(v)};
+        return pfx+lst.map(a=>{
           const slotKey=`${a.part}|${a.start}|${a.end}`;
           const isFirst=!seenSlot.has(slotKey);
           if(isFirst)seenSlot.add(slotKey);
@@ -626,8 +624,8 @@ function renderPrintView(){
       }).join(', ')||'-';
       aI='';
       if(e.aaRoom){
-        const aa=als.filter(a=>a.venue===e.aaRoom);
-        aI=aa.map(a=>{
+        const aa=als.filter(a=>a.venue===e.aaRoom&&a.isAA);
+        const aaLines=aa.map(a=>{
           const sel=data.teachers.find(x=>x.id===a.teacherId);
           const extra=Math.max(0,durMin(e.end,a.end));
           const xm=extra?` (+${extra}分)`:'';
@@ -635,7 +633,8 @@ function renderPrintView(){
           const isMine=filterId&&a.teacherId===filterId;
           const style=isMine?' style="background:#fef3c7;padding:1px 4px;border-radius:3px;font-weight:700"':'';
           return `<span${style}>${partTime(e,a)}${xm}: ${nm}</span>`;
-        }).join('<br>');
+        });
+        aI=aaLines.length?(`<b>${esc(e.aaRoom)}:</b><br>`+aaLines.join('<br>')):`<b>${esc(e.aaRoom)}:</b> <span style="color:#94a3b8">尚未安排</span>`;
       }
       aI=aI||'-';
     }
