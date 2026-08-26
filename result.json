@@ -1,6 +1,6 @@
 {
   "version": "v4",
-  "time": "2026-08-24T04:12:22.434Z",
+  "time": "2026-08-26T07:00:21.004Z",
   "data": {
     "config": {
       "title": "2026-2027 Review Week",
@@ -1771,11 +1771,11 @@
         "subject": "Visual Arts (Paper 1)",
         "type": "normal",
         "venues": [
-          "206"
+          "306"
         ],
         "perRoom": 1,
         "standby": 1,
-        "aaRoom": "206",
+        "aaRoom": "306",
         "aaExtra": 11,
         "aaExtra2": 0,
         "aaExtra3": 0
@@ -3799,46 +3799,6 @@
         "_idx": 26
       },
       {
-        "examId": "mqt64tcez1xpk",
-        "venue": "206",
-        "part": "part1",
-        "partLabel": "上半",
-        "teacherId": "mqt2yca9l9tnh",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-26",
-        "start": "08:30",
-        "end": "10:05",
-        "mergedExamIds": [
-          "mqt64tcez1xpk"
-        ],
-        "_idx": 27
-      },
-      {
-        "examId": "mqt62j8f8352g",
-        "venue": "(Standby)",
-        "part": "standby",
-        "partLabel": "後備",
-        "teacherId": "mqt2yca9pxpy9",
-        "isMain": false,
-        "isStandby": true,
-        "isAA": false,
-        "date": "2026-08-26",
-        "start": "08:30",
-        "end": "12:30",
-        "mergedExamIds": [
-          "mqt62j8f8352g",
-          "mqt62skx1x1s1",
-          "mqt6351ibv856",
-          "mqt63shktq8x5",
-          "mqt6443kkack0",
-          "mqt64dqgvbaf1",
-          "mqt64tcez1xpk"
-        ],
-        "_idx": 28
-      },
-      {
         "examId": "mqt6351ibv856",
         "venue": "601",
         "part": "aa1",
@@ -3855,24 +3815,7 @@
           "mqt63shktq8x5",
           "mqt64dqgvbaf1"
         ],
-        "_idx": 29
-      },
-      {
-        "examId": "mqt64tcez1xpk",
-        "venue": "206",
-        "part": "aa1",
-        "partLabel": "AA上",
-        "teacherId": "mqt2yca9l9tnh",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": true,
-        "date": "2026-08-26",
-        "start": "08:30",
-        "end": "10:30",
-        "mergedExamIds": [
-          "mqt64tcez1xpk"
-        ],
-        "_idx": 30
+        "_idx": 27
       },
       {
         "examId": "mqt62j8f8352g",
@@ -3889,7 +3832,7 @@
         "mergedExamIds": [
           "mqt62j8f8352g"
         ],
-        "_idx": 31
+        "_idx": 28
       },
       {
         "examId": "mqt62j8f8352g",
@@ -3906,24 +3849,7 @@
         "mergedExamIds": [
           "mqt62j8f8352g"
         ],
-        "_idx": 32
-      },
-      {
-        "examId": "mqt64tcez1xpk",
-        "venue": "206",
-        "part": "part2",
-        "partLabel": "下半",
-        "teacherId": "mqt2yca923mzr",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-26",
-        "start": "09:55",
-        "end": "12:30",
-        "mergedExamIds": [
-          "mqt64tcez1xpk"
-        ],
-        "_idx": 33
+        "_idx": 29
       },
       {
         "examId": "mqt6351ibv856",
@@ -3942,24 +3868,7 @@
           "mqt63shktq8x5",
           "mqt64dqgvbaf1"
         ],
-        "_idx": 34
-      },
-      {
-        "examId": "mqt64tcez1xpk",
-        "venue": "206",
-        "part": "aa2",
-        "partLabel": "AA下",
-        "teacherId": "mqt2yca923mzr",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": true,
-        "date": "2026-08-26",
-        "start": "10:20",
-        "end": "12:41",
-        "mergedExamIds": [
-          "mqt64tcez1xpk"
-        ],
-        "_idx": 35
+        "_idx": 30
       },
       {
         "examId": "mqt65i14hbhaa",
@@ -3979,7 +3888,7 @@
           "mqt667e5oersl",
           "mqt66l2wjatbi"
         ],
-        "_idx": 36
+        "_idx": 31
       },
       {
         "examId": "mqt66l2wjatbi",
@@ -3996,7 +3905,7 @@
         "mergedExamIds": [
           "mqt66l2wjatbi"
         ],
-        "_idx": 37
+        "_idx": 32
       },
       {
         "examId": "mqt67ksfeg0fs",
@@ -4013,7 +3922,7 @@
         "mergedExamIds": [
           "mqt67ksfeg0fs"
         ],
-        "_idx": 38
+        "_idx": 33
       },
       {
         "examId": "mqt676nl5xp7q",
@@ -4030,7 +3939,7 @@
         "mergedExamIds": [
           "mqt676nl5xp7q"
         ],
-        "_idx": 39
+        "_idx": 34
       },
       {
         "examId": "mqt67ksfeg0fs",
@@ -4047,7 +3956,7 @@
         "mergedExamIds": [
           "mqt67ksfeg0fs"
         ],
-        "_idx": 40
+        "_idx": 35
       },
       {
         "examId": "mqt676nl5xp7q",
@@ -4064,7 +3973,7 @@
         "mergedExamIds": [
           "mqt676nl5xp7q"
         ],
-        "_idx": 41
+        "_idx": 36
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4081,7 +3990,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 42
+        "_idx": 37
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4098,7 +4007,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 43
+        "_idx": 38
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4115,7 +4024,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 44
+        "_idx": 39
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4132,7 +4041,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 45
+        "_idx": 40
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4149,7 +4058,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 46
+        "_idx": 41
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4166,7 +4075,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 47
+        "_idx": 42
       },
       {
         "examId": "mqz9v3rmzwswm",
@@ -4183,7 +4092,7 @@
         "mergedExamIds": [
           "mqz9v3rmzwswm"
         ],
-        "_idx": 48
+        "_idx": 43
       },
       {
         "examId": "mqz9w3u7y4bxj",
@@ -4200,7 +4109,7 @@
         "mergedExamIds": [
           "mqz9w3u7y4bxj"
         ],
-        "_idx": 49
+        "_idx": 44
       },
       {
         "examId": "mqz9w3u7y4bxj",
@@ -4217,7 +4126,7 @@
         "mergedExamIds": [
           "mqz9w3u7y4bxj"
         ],
-        "_idx": 50
+        "_idx": 45
       },
       {
         "examId": "mqz9w3u7y4bxj",
@@ -4234,7 +4143,7 @@
         "mergedExamIds": [
           "mqz9w3u7y4bxj"
         ],
-        "_idx": 51
+        "_idx": 46
       },
       {
         "examId": "mqz9w3u7y4bxj",
@@ -4251,7 +4160,7 @@
         "mergedExamIds": [
           "mqz9w3u7y4bxj"
         ],
-        "_idx": 52
+        "_idx": 47
       },
       {
         "examId": "mqz9wqjuh8ly4",
@@ -4268,7 +4177,7 @@
         "mergedExamIds": [
           "mqz9wqjuh8ly4"
         ],
-        "_idx": 53
+        "_idx": 48
       },
       {
         "examId": "mqz9wqjuh8ly4",
@@ -4285,7 +4194,7 @@
         "mergedExamIds": [
           "mqz9wqjuh8ly4"
         ],
-        "_idx": 54
+        "_idx": 49
       },
       {
         "examId": "mqz9wqjuh8ly4",
@@ -4302,7 +4211,7 @@
         "mergedExamIds": [
           "mqz9wqjuh8ly4"
         ],
-        "_idx": 55
+        "_idx": 50
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4321,7 +4230,7 @@
           "mqz9xmwma2wro",
           "mqz9y1wwfe4g3"
         ],
-        "_idx": 56
+        "_idx": 51
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4340,7 +4249,7 @@
           "mqz9xmwma2wro",
           "mqz9y1wwfe4g3"
         ],
-        "_idx": 57
+        "_idx": 52
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4358,7 +4267,7 @@
           "mqz9xebvpu88p",
           "mqz9xmwma2wro"
         ],
-        "_idx": 58
+        "_idx": 53
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4375,7 +4284,7 @@
         "mergedExamIds": [
           "mqz9xebvpu88p"
         ],
-        "_idx": 59
+        "_idx": 54
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4393,7 +4302,7 @@
           "mqz9xebvpu88p",
           "mqz9xmwma2wro"
         ],
-        "_idx": 60
+        "_idx": 55
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4410,7 +4319,7 @@
         "mergedExamIds": [
           "mqz9ym6jiwkja"
         ],
-        "_idx": 61
+        "_idx": 56
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4427,7 +4336,7 @@
         "mergedExamIds": [
           "mqz9ym6jiwkja"
         ],
-        "_idx": 62
+        "_idx": 57
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4444,7 +4353,7 @@
         "mergedExamIds": [
           "mqz9ym6jiwkja"
         ],
-        "_idx": 63
+        "_idx": 58
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4461,7 +4370,7 @@
         "mergedExamIds": [
           "mqz9ym6jiwkja"
         ],
-        "_idx": 64
+        "_idx": 59
       },
       {
         "examId": "mqz9ym6jiwkja",
@@ -4478,7 +4387,7 @@
         "mergedExamIds": [
           "mqz9ym6jiwkja"
         ],
-        "_idx": 65
+        "_idx": 60
       },
       {
         "examId": "mqz9zkk1ctglp",
@@ -4495,7 +4404,7 @@
         "mergedExamIds": [
           "mqz9zkk1ctglp"
         ],
-        "_idx": 66
+        "_idx": 61
       },
       {
         "examId": "mqz9zkk1ctglp",
@@ -4512,7 +4421,7 @@
         "mergedExamIds": [
           "mqz9zkk1ctglp"
         ],
-        "_idx": 67
+        "_idx": 62
       },
       {
         "examId": "mqza0orpx0zb9",
@@ -4529,7 +4438,7 @@
         "mergedExamIds": [
           "mqza0orpx0zb9"
         ],
-        "_idx": 68
+        "_idx": 63
       },
       {
         "examId": "mqza0orpx0zb9",
@@ -4546,7 +4455,7 @@
         "mergedExamIds": [
           "mqza0orpx0zb9"
         ],
-        "_idx": 69
+        "_idx": 64
       },
       {
         "examId": "mqza0orpx0zb9",
@@ -4563,7 +4472,7 @@
         "mergedExamIds": [
           "mqza0orpx0zb9"
         ],
-        "_idx": 70
+        "_idx": 65
       },
       {
         "examId": "mqza0orpx0zb9",
@@ -4580,7 +4489,7 @@
         "mergedExamIds": [
           "mqza0orpx0zb9"
         ],
-        "_idx": 71
+        "_idx": 66
       },
       {
         "examId": "mqt65i14hbhaa",
@@ -4599,7 +4508,7 @@
           "mqt667e5oersl",
           "mqt66l2wjatbi"
         ],
-        "_idx": 72
+        "_idx": 67
       },
       {
         "examId": "mqt676nl5xp7q",
@@ -4614,7 +4523,7 @@
         "start": "14:00",
         "end": "16:00",
         "mergedExamIds": [],
-        "_idx": 73
+        "_idx": 68
       },
       {
         "examId": "mqt676nl5xp7q",
@@ -4628,7 +4537,7 @@
         "date": "2026-08-26",
         "start": "14:00",
         "end": "16:00",
-        "_idx": 74
+        "_idx": 69
       },
       {
         "examId": "mqza092vvcb94",
@@ -4642,7 +4551,7 @@
         "date": "2026-08-29",
         "start": "08:30",
         "end": "10:30",
-        "_idx": 75
+        "_idx": 70
       },
       {
         "examId": "mqza092vvcb94",
@@ -4656,7 +4565,7 @@
         "date": "2026-08-29",
         "start": "08:30",
         "end": "10:30",
-        "_idx": 76
+        "_idx": 71
       },
       {
         "examId": "mqza092vvcb94",
@@ -4670,7 +4579,7 @@
         "date": "2026-08-29",
         "start": "08:30",
         "end": "10:49",
-        "_idx": 77
+        "_idx": 72
       },
       {
         "examId": "msyf3em0ses7j",
@@ -4684,7 +4593,7 @@
         "date": "2026-08-29",
         "start": "08:30",
         "end": "11:03",
-        "_idx": 78
+        "_idx": 73
       },
       {
         "examId": "mqza092vvcb94",
@@ -4699,7 +4608,7 @@
         "start": "08:30",
         "end": "10:30",
         "mergedExamIds": [],
-        "_idx": 79
+        "_idx": 74
       },
       {
         "examId": "mqz9wqjuh8ly4",
@@ -4713,7 +4622,7 @@
         "date": "2026-08-27",
         "start": "14:30",
         "end": "16:45",
-        "_idx": 80
+        "_idx": 75
       },
       {
         "examId": "mqt4qzgf095tk",
@@ -4727,7 +4636,7 @@
         "date": "2026-08-24",
         "start": "08:30",
         "end": "10:05",
-        "_idx": 81
+        "_idx": 76
       },
       {
         "examId": "mqt62j8f8352g",
@@ -4741,7 +4650,35 @@
         "date": "2026-08-26",
         "start": "08:30",
         "end": "10:05",
-        "_idx": 82
+        "_idx": 77
+      },
+      {
+        "examId": "mqt64tcez1xpk",
+        "venue": "306",
+        "part": "full",
+        "partLabel": "",
+        "teacherId": "mqt2yca9l9tnh",
+        "isMain": true,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-26",
+        "start": "08:30",
+        "end": "12:30",
+        "_idx": 78
+      },
+      {
+        "examId": "mqt64tcez1xpk",
+        "venue": "306",
+        "part": "full",
+        "partLabel": "",
+        "teacherId": "mqt2yca923mzr",
+        "isMain": false,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-26",
+        "start": "08:30",
+        "end": "12:30",
+        "_idx": 79
       }
     ]
   }
