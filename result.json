@@ -1901,66 +1901,6 @@
         "aaExtra3": 0
       },
       {
-        "id": "mqz9v3rmzwswm",
-        "no": "#026",
-        "level": "F.6 DSE",
-        "date": "2026-08-27",
-        "session": 1,
-        "start": "08:30",
-        "end": "10:45",
-        "subject": "Mathematics (Core)  Paper 1 (Conventional Questions)",
-        "type": "normal",
-        "venues": [
-          "602AB"
-        ],
-        "perRoom": 2,
-        "standby": 1,
-        "aaRoom": "601",
-        "aaExtra": 34,
-        "aaExtra2": 35,
-        "aaExtra3": 0
-      },
-      {
-        "id": "mqz9w3u7y4bxj",
-        "no": "#027",
-        "level": "F.6 DSE",
-        "date": "2026-08-27",
-        "session": 2,
-        "start": "11:30",
-        "end": "12:45",
-        "subject": "Mathematics (Core)  Paper 2 (Multiple-choice)",
-        "type": "normal",
-        "venues": [
-          "602AB"
-        ],
-        "perRoom": 2,
-        "standby": 1,
-        "aaRoom": "601",
-        "aaExtra": 13,
-        "aaExtra2": 19,
-        "aaExtra3": 0
-      },
-      {
-        "id": "mqz9wqjuh8ly4",
-        "no": "#028",
-        "level": "F.6 DSE",
-        "date": "2026-08-27",
-        "session": 3,
-        "start": "14:30",
-        "end": "16:45",
-        "subject": "Chinese Language 中國語文 Paper 2  (Writing 寫作能力) (for CHI#5_1 to CHI#5_2)",
-        "type": "normal",
-        "venues": [
-          "602AB"
-        ],
-        "perRoom": 1,
-        "standby": 1,
-        "aaRoom": "601",
-        "aaExtra": 34,
-        "aaExtra2": 49,
-        "aaExtra3": 0
-      },
-      {
         "id": "mqz9xebvpu88p",
         "no": "#029",
         "level": "F.6 DSE",
@@ -2119,6 +2059,69 @@
         "aaExtra": 0,
         "aaExtra2": 0,
         "aaExtra3": 0
+      },
+      {
+        "id": "postpone_026",
+        "no": "#026",
+        "level": "F.6 DSE",
+        "date": "2026-08-31",
+        "session": 1,
+        "start": "13:40",
+        "end": "15:55",
+        "subject": "Mathematics (Core)  Paper 1 (Conventional Questions)",
+        "type": "normal",
+        "venues": [
+          "Hall"
+        ],
+        "perRoom": 1,
+        "standby": 1,
+        "aaRoom": "201",
+        "aaExtra": 35,
+        "aaExtra2": 0,
+        "aaExtra3": 0,
+        "specialArrangement": true
+      },
+      {
+        "id": "postpone_027",
+        "no": "#027",
+        "level": "F.6 DSE",
+        "date": "2026-08-31",
+        "session": 2,
+        "start": "16:25",
+        "end": "17:40",
+        "subject": "Mathematics (Core)  Paper 2 (Multiple-choice)",
+        "type": "normal",
+        "venues": [
+          "Hall"
+        ],
+        "perRoom": 1,
+        "standby": 1,
+        "aaRoom": "201",
+        "aaExtra": 13,
+        "aaExtra2": 0,
+        "aaExtra3": 0,
+        "specialArrangement": true
+      },
+      {
+        "id": "postpone_028",
+        "no": "#028",
+        "level": "F.6 DSE",
+        "date": "2026-09-02",
+        "session": 3,
+        "start": "15:30",
+        "end": "17:45",
+        "subject": "Chinese Language 中國語文 Paper 2  (Writing 寫作能力) (for CHI#6_1 to CHI#6_2)",
+        "type": "normal",
+        "venues": [
+          "Hall"
+        ],
+        "perRoom": 1,
+        "standby": 1,
+        "aaRoom": "401",
+        "aaExtra": 49,
+        "aaExtra2": 0,
+        "aaExtra3": 0,
+        "specialArrangement": true
       }
     ],
     "subjects": [
@@ -3799,25 +3802,6 @@
         "_idx": 26
       },
       {
-        "examId": "mqt6351ibv856",
-        "venue": "601",
-        "part": "aa1",
-        "partLabel": "AA上",
-        "teacherId": "mqt2yca9luu4l",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": true,
-        "date": "2026-08-26",
-        "start": "08:30",
-        "end": "10:30",
-        "mergedExamIds": [
-          "mqt6351ibv856",
-          "mqt63shktq8x5",
-          "mqt64dqgvbaf1"
-        ],
-        "_idx": 27
-      },
-      {
         "examId": "mqt62j8f8352g",
         "venue": "602AB",
         "part": "part2",
@@ -3850,25 +3834,6 @@
           "mqt62j8f8352g"
         ],
         "_idx": 29
-      },
-      {
-        "examId": "mqt6351ibv856",
-        "venue": "601",
-        "part": "aa2",
-        "partLabel": "AA下",
-        "teacherId": "mqt2yca9qcod5",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": true,
-        "date": "2026-08-26",
-        "start": "10:20",
-        "end": "12:15",
-        "mergedExamIds": [
-          "mqt6351ibv856",
-          "mqt63shktq8x5",
-          "mqt64dqgvbaf1"
-        ],
-        "_idx": 30
       },
       {
         "examId": "mqt65i14hbhaa",
@@ -3974,244 +3939,6 @@
           "mqt676nl5xp7q"
         ],
         "_idx": 36
-      },
-      {
-        "examId": "mqz9v3rmzwswm",
-        "venue": "602AB",
-        "part": "part1",
-        "partLabel": "上半",
-        "teacherId": "mqt2yca9n8irs",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-27",
-        "start": "08:30",
-        "end": "10:05",
-        "mergedExamIds": [
-          "mqz9v3rmzwswm"
-        ],
-        "_idx": 37
-      },
-      {
-        "examId": "mqz9v3rmzwswm",
-        "venue": "602AB",
-        "part": "part1",
-        "partLabel": "上半",
-        "teacherId": "mqt2yca98zfk0",
-        "isMain": false,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-27",
-        "start": "08:30",
-        "end": "10:05",
-        "mergedExamIds": [
-          "mqz9v3rmzwswm"
-        ],
-        "_idx": 38
-      },
-      {
-        "examId": "mqz9v3rmzwswm",
-        "venue": "(Standby)",
-        "part": "standby",
-        "partLabel": "後備",
-        "teacherId": "mqt2yca9yy3zz",
-        "isMain": false,
-        "isStandby": true,
-        "isAA": false,
-        "date": "2026-08-27",
-        "start": "08:30",
-        "end": "10:45",
-        "mergedExamIds": [
-          "mqz9v3rmzwswm"
-        ],
-        "_idx": 39
-      },
-      {
-        "examId": "mqz9v3rmzwswm",
-        "venue": "601",
-        "part": "aa1",
-        "partLabel": "AA上",
-        "teacherId": "mqt2yca9zgouc",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": true,
-        "date": "2026-08-27",
-        "start": "08:30",
-        "end": "10:30",
-        "mergedExamIds": [
-          "mqz9v3rmzwswm"
-        ],
-        "_idx": 40
-      },
-      {
-        "examId": "mqz9v3rmzwswm",
-        "venue": "602AB",
-        "part": "part2",
-        "partLabel": "下半",
-        "teacherId": "mqt2yca9qejlr",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-27",
-        "start": "09:55",
-        "end": "10:45",
-        "mergedExamIds": [
-          "mqz9v3rmzwswm"
-        ],
-        "_idx": 41
-      },
-      {
-        "examId": "mqz9v3rmzwswm",
-        "venue": "602AB",
-        "part": "part2",
-        "partLabel": "下半",
-        "teacherId": "mqt2yca9s98ac",
-        "isMain": false,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-27",
-        "start": "09:55",
-        "end": "10:45",
-        "mergedExamIds": [
-          "mqz9v3rmzwswm"
-        ],
-        "_idx": 42
-      },
-      {
-        "examId": "mqz9v3rmzwswm",
-        "venue": "601",
-        "part": "aa2",
-        "partLabel": "AA下",
-        "teacherId": "mqt2yca9l9tnh",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": true,
-        "date": "2026-08-27",
-        "start": "10:20",
-        "end": "11:20",
-        "mergedExamIds": [
-          "mqz9v3rmzwswm"
-        ],
-        "_idx": 43
-      },
-      {
-        "examId": "mqz9w3u7y4bxj",
-        "venue": "602AB",
-        "part": "full",
-        "partLabel": "",
-        "teacherId": "mqt2yca9abz1a",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-27",
-        "start": "11:30",
-        "end": "12:45",
-        "mergedExamIds": [
-          "mqz9w3u7y4bxj"
-        ],
-        "_idx": 44
-      },
-      {
-        "examId": "mqz9w3u7y4bxj",
-        "venue": "602AB",
-        "part": "full",
-        "partLabel": "",
-        "teacherId": "mswn0bhthufz4",
-        "isMain": false,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-27",
-        "start": "11:30",
-        "end": "12:45",
-        "mergedExamIds": [
-          "mqz9w3u7y4bxj"
-        ],
-        "_idx": 45
-      },
-      {
-        "examId": "mqz9w3u7y4bxj",
-        "venue": "(Standby)",
-        "part": "standby",
-        "partLabel": "後備",
-        "teacherId": "mqt2yca9mv7oy",
-        "isMain": false,
-        "isStandby": true,
-        "isAA": false,
-        "date": "2026-08-27",
-        "start": "11:30",
-        "end": "12:45",
-        "mergedExamIds": [
-          "mqz9w3u7y4bxj"
-        ],
-        "_idx": 46
-      },
-      {
-        "examId": "mqz9w3u7y4bxj",
-        "venue": "601",
-        "part": "aa",
-        "partLabel": "AA",
-        "teacherId": "mswm8j443s7tl",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": true,
-        "date": "2026-08-27",
-        "start": "11:30",
-        "end": "13:04",
-        "mergedExamIds": [
-          "mqz9w3u7y4bxj"
-        ],
-        "_idx": 47
-      },
-      {
-        "examId": "mqz9wqjuh8ly4",
-        "venue": "(Standby)",
-        "part": "standby",
-        "partLabel": "後備",
-        "teacherId": "mswn0bhthufz4",
-        "isMain": false,
-        "isStandby": true,
-        "isAA": false,
-        "date": "2026-08-27",
-        "start": "14:30",
-        "end": "16:45",
-        "mergedExamIds": [
-          "mqz9wqjuh8ly4"
-        ],
-        "_idx": 48
-      },
-      {
-        "examId": "mqz9wqjuh8ly4",
-        "venue": "601",
-        "part": "aa1",
-        "partLabel": "AA上",
-        "teacherId": "mswm8j443s7tl",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": true,
-        "date": "2026-08-27",
-        "start": "14:30",
-        "end": "16:30",
-        "mergedExamIds": [
-          "mqz9wqjuh8ly4"
-        ],
-        "_idx": 49
-      },
-      {
-        "examId": "mqz9wqjuh8ly4",
-        "venue": "601",
-        "part": "aa2",
-        "partLabel": "AA下",
-        "teacherId": "mswm8j443s7tl",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": true,
-        "date": "2026-08-27",
-        "start": "16:20",
-        "end": "17:34",
-        "mergedExamIds": [
-          "mqz9wqjuh8ly4"
-        ],
-        "_idx": 50
       },
       {
         "examId": "mqz9xebvpu88p",
@@ -4611,20 +4338,6 @@
         "_idx": 74
       },
       {
-        "examId": "mqz9wqjuh8ly4",
-        "venue": "602AB",
-        "part": "full",
-        "partLabel": "",
-        "teacherId": "msyeujm9tjaa1",
-        "isMain": true,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-27",
-        "start": "14:30",
-        "end": "16:45",
-        "_idx": 75
-      },
-      {
         "examId": "mqt4qzgf095tk",
         "venue": "602AB",
         "part": "part1",
@@ -4679,6 +4392,256 @@
         "start": "08:30",
         "end": "12:30",
         "_idx": 79
+      },
+      {
+        "examId": "mqt6351ibv856",
+        "venue": "601",
+        "part": "aa1",
+        "partLabel": "AA上",
+        "teacherId": "mqt2yca9qcod5",
+        "isMain": true,
+        "isStandby": false,
+        "isAA": true,
+        "date": "2026-08-26",
+        "start": "08:30",
+        "end": "10:30",
+        "mergedExamIds": [
+          "mqt6351ibv856"
+        ],
+        "_idx": 82
+      },
+      {
+        "examId": "mqt6351ibv856",
+        "venue": "601",
+        "part": "aa2",
+        "partLabel": "AA下(+75分)",
+        "teacherId": "mqt2yca9luu4l",
+        "isMain": true,
+        "isStandby": false,
+        "isAA": true,
+        "date": "2026-08-26",
+        "start": "10:20",
+        "end": "12:15",
+        "mergedExamIds": [
+          "mqt6351ibv856"
+        ],
+        "_idx": 83
+      },
+      {
+        "examId": "postpone_026",
+        "venue": "Hall",
+        "part": "full",
+        "partLabel": "",
+        "teacherId": "mqt2yca926ejr",
+        "isMain": true,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-31",
+        "start": "13:40",
+        "end": "15:55",
+        "mergedExamIds": [
+          "postpone_026"
+        ],
+        "_idx": 84
+      },
+      {
+        "examId": "postpone_026",
+        "venue": "Hall",
+        "part": "full",
+        "partLabel": "",
+        "teacherId": "mqt2yca9gxp95",
+        "isMain": false,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-31",
+        "start": "13:40",
+        "end": "15:55",
+        "mergedExamIds": [
+          "postpone_026"
+        ],
+        "_idx": 85
+      },
+      {
+        "examId": "postpone_026",
+        "venue": "(Standby)",
+        "part": "standby",
+        "partLabel": "後備",
+        "teacherId": "mqt2yca9n8irs",
+        "isMain": false,
+        "isStandby": true,
+        "isAA": false,
+        "date": "2026-08-31",
+        "start": "13:40",
+        "end": "15:55",
+        "mergedExamIds": [
+          "postpone_026"
+        ],
+        "_idx": 86
+      },
+      {
+        "examId": "postpone_026",
+        "venue": "201",
+        "part": "aa2",
+        "partLabel": "AA2(+35分)",
+        "teacherId": "mqt2yca94h60u",
+        "isMain": false,
+        "isStandby": false,
+        "isAA": true,
+        "date": "2026-08-31",
+        "start": "13:40",
+        "end": "16:30",
+        "mergedExamIds": [
+          "postpone_026"
+        ],
+        "_idx": 87
+      },
+      {
+        "examId": "postpone_027",
+        "venue": "Hall",
+        "part": "full",
+        "partLabel": "",
+        "teacherId": "mqt2yca9izwll",
+        "isMain": true,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-31",
+        "start": "16:25",
+        "end": "17:40",
+        "mergedExamIds": [
+          "postpone_027"
+        ],
+        "_idx": 88
+      },
+      {
+        "examId": "postpone_027",
+        "venue": "Hall",
+        "part": "full",
+        "partLabel": "",
+        "teacherId": "mqt2yca9l9rlc",
+        "isMain": false,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-31",
+        "start": "16:25",
+        "end": "17:40",
+        "mergedExamIds": [
+          "postpone_027"
+        ],
+        "_idx": 89
+      },
+      {
+        "examId": "postpone_027",
+        "venue": "(Standby)",
+        "part": "standby",
+        "partLabel": "後備",
+        "teacherId": "mqt2yca9vtel9",
+        "isMain": false,
+        "isStandby": true,
+        "isAA": false,
+        "date": "2026-08-31",
+        "start": "16:25",
+        "end": "17:40",
+        "mergedExamIds": [
+          "postpone_027"
+        ],
+        "_idx": 90
+      },
+      {
+        "examId": "postpone_027",
+        "venue": "201",
+        "part": "aa2",
+        "partLabel": "AA2(+13分)",
+        "teacherId": "mqt2yca94h60u",
+        "isMain": false,
+        "isStandby": false,
+        "isAA": true,
+        "date": "2026-08-31",
+        "start": "17:00",
+        "end": "18:28",
+        "mergedExamIds": [
+          "postpone_027"
+        ],
+        "_idx": 91
+      },
+      {
+        "examId": "postpone_028",
+        "venue": "Hall",
+        "part": "full",
+        "partLabel": "",
+        "teacherId": "mqt2yca9g56qy",
+        "isMain": true,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-09-02",
+        "start": "15:30",
+        "end": "17:45",
+        "mergedExamIds": [
+          "postpone_028"
+        ],
+        "_idx": 92
+      },
+      {
+        "examId": "postpone_028",
+        "venue": "(Standby)",
+        "part": "standby",
+        "partLabel": "後備",
+        "teacherId": "mqt2yca9vtel9",
+        "isMain": false,
+        "isStandby": true,
+        "isAA": false,
+        "date": "2026-09-02",
+        "start": "15:30",
+        "end": "17:45",
+        "mergedExamIds": [
+          "postpone_028"
+        ],
+        "_idx": 93
+      },
+      {
+        "examId": "postpone_028",
+        "venue": "401",
+        "part": "aa1",
+        "partLabel": "AA1",
+        "teacherId": "mqt2yca9s09u2",
+        "isMain": true,
+        "isStandby": false,
+        "isAA": true,
+        "date": "2026-09-02",
+        "start": "15:30",
+        "end": "15:55",
+        "mergedExamIds": [
+          "postpone_028"
+        ],
+        "_idx": 94
+      },
+      {
+        "examId": "postpone_028",
+        "venue": "401",
+        "part": "aa2",
+        "partLabel": "AA2(+49分)",
+        "teacherId": "mqt2yca94h60u",
+        "isMain": true,
+        "isStandby": false,
+        "isAA": true,
+        "date": "2026-09-02",
+        "start": "15:55",
+        "end": "17:45",
+        "mergedExamIds": [
+          "postpone_028"
+        ],
+        "_idx": 95
+      }
+    ],
+    "notes": [
+      {
+        "type": "postponement",
+        "date": "2026-08-27",
+        "sessions": [
+          1,
+          2,
+          3
+        ],
+        "text": "Due to the Red Rainstorm Warning on Thursday, 27 August, the F.6 DSE Review Week assessments for Mathematics (Core) Papers 1 & 2 and Chinese Language Paper 2 (Writing) were postponed."
       }
     ]
   }
