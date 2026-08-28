@@ -410,21 +410,7 @@ function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;',
 function partTime(e,a){
   if(!e)return a.start+'-'+a.end;
   const th=(data.config||{}).splitThreshold,ov=(data.config||{}).overlap||0;
-  if(a.isStandby)return e.start+'-'+e.end;
-  if(e.no==='#020'&&a.part==='full'&&!a.isAA){
-    const sibs=data.allocation.filter(x=>x.examId===a.examId&&x.venue===a.venue&&x.part==='full'&&!x.isStandby&&!x.isAA);
-    if(sibs.length>=2){
-      const ord=sibs.indexOf(a);
-      const mid=Math.round((t2m(e.start)+t2m(e.end))/2);
-      const ext=t2m(e.end)+(+e.aaExtra||0);
-      if(ord===0)return e.start+'-'+m2t(mid);
-      if(ord===1)return m2t(mid-ov)+'-'+m2t(ext);
-    }
-  }
-  if(a.part==='full'){
-    if(e.aaRoom&&a.venue===e.aaRoom&&(+e.aaExtra||0))return e.start+'-'+m2t(t2m(e.end)+(+e.aaExtra||0));
-    return e.start+'-'+e.end;
-  }
+  if(a.isStandby||a.part==='full')return e.start+'-'+e.end;
   if(e&&e.no==='#020'){
     const mid=Math.round((t2m(e.start)+t2m(e.end))/2);
     const ext=t2m(e.end)+(+e.aaExtra||0);
