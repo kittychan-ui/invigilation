@@ -1368,14 +1368,25 @@
         "pigeonhole": "J5"
       },
       {
-        "id": "msyeujm9tjaa1",
-        "name": "Sally Hui",
+        "id": "msyk0a31kac01",
+        "name": "CHAN, Chung Yan (Karen)",
         "cname": "",
-        "code": "SaH",
-        "dept": "",
-        "role": "",
+        "code": "KaC",
+        "dept": "Student Support Team",
+        "role": "SEN TA",
         "classTeacher": "",
-        "isSen": 0,
+        "isSen": 1,
+        "cap": 0
+      },
+      {
+        "id": "msyk0a31betsy",
+        "name": "PANG, Betsy",
+        "cname": "",
+        "code": "BP",
+        "dept": "Student Support Team",
+        "role": "SEN TA",
+        "classTeacher": "",
+        "isSen": 1,
         "cap": 0
       }
     ],
@@ -4169,27 +4180,10 @@
       },
       {
         "examId": "mqza0orpx0zb9",
-        "venue": "602AB",
-        "part": "full",
-        "partLabel": "",
-        "teacherId": "mqt2yca9iprhh",
-        "isMain": false,
-        "isStandby": false,
-        "isAA": false,
-        "date": "2026-08-29",
-        "start": "11:30",
-        "end": "12:30",
-        "mergedExamIds": [
-          "mqza0orpx0zb9"
-        ],
-        "_idx": 64
-      },
-      {
-        "examId": "mqza0orpx0zb9",
         "venue": "(Standby)",
         "part": "standby",
         "partLabel": "後備",
-        "teacherId": "mqt2yca9vtel9",
+        "teacherId": "mqt2yca9s6u9v",
         "isMain": false,
         "isStandby": true,
         "isAA": false,
@@ -4327,7 +4321,7 @@
         "venue": "(Standby)",
         "part": "standby",
         "partLabel": "後備",
-        "teacherId": "mqt2yca9iprhh",
+        "teacherId": "mqt2yca9s6u9v",
         "isMain": false,
         "isStandby": true,
         "isAA": false,
@@ -4483,7 +4477,7 @@
         "venue": "201",
         "part": "aa2",
         "partLabel": "AA2(+35分)",
-        "teacherId": "mqt2yca94h60u",
+        "teacherId": "msyk0a31kac01",
         "isMain": false,
         "isStandby": false,
         "isAA": true,
@@ -4602,13 +4596,13 @@
         "venue": "401",
         "part": "aa1",
         "partLabel": "AA1",
-        "teacherId": "mqt2yca9s09u2",
+        "teacherId": "msyk0a31betsy",
         "isMain": true,
         "isStandby": false,
         "isAA": true,
         "date": "2026-09-02",
         "start": "15:30",
-        "end": "15:55",
+        "end": "17:00",
         "mergedExamIds": [
           "postpone_028"
         ],
@@ -4624,12 +4618,29 @@
         "isStandby": false,
         "isAA": true,
         "date": "2026-09-02",
-        "start": "15:55",
-        "end": "17:45",
+        "start": "16:55",
+        "end": "18:34",
         "mergedExamIds": [
           "postpone_028"
         ],
         "_idx": 95
+      },
+      {
+        "examId": "mqza0orpx0zb9",
+        "venue": "602AB",
+        "part": "full",
+        "partLabel": "",
+        "teacherId": "mqt2yca9vtel9",
+        "isMain": false,
+        "isStandby": false,
+        "isAA": false,
+        "date": "2026-08-29",
+        "start": "11:30",
+        "end": "12:30",
+        "mergedExamIds": [
+          "mqza0orpx0zb9"
+        ],
+        "_idx": 63
       }
     ],
     "notes": [
