@@ -2099,7 +2099,7 @@
         "date": "2026-08-31",
         "session": 2,
         "start": "16:25",
-        "end": "17:40",
+        "end": "17:56",
         "subject": "Mathematics (Core)  Paper 2 (Multiple-choice)",
         "type": "normal",
         "venues": [
@@ -2108,7 +2108,7 @@
         "perRoom": 1,
         "standby": 1,
         "aaRoom": "201",
-        "aaExtra": 13,
+        "aaExtra": 48,
         "aaExtra2": 0,
         "aaExtra3": 0,
         "specialArrangement": true
@@ -4500,7 +4500,7 @@
         "isAA": false,
         "date": "2026-08-31",
         "start": "16:25",
-        "end": "17:40",
+        "end": "17:56",
         "mergedExamIds": [
           "postpone_027"
         ],
@@ -4517,7 +4517,7 @@
         "isAA": false,
         "date": "2026-08-31",
         "start": "16:25",
-        "end": "17:40",
+        "end": "17:56",
         "mergedExamIds": [
           "postpone_027"
         ],
@@ -4534,7 +4534,7 @@
         "isAA": false,
         "date": "2026-08-31",
         "start": "16:25",
-        "end": "17:40",
+        "end": "17:56",
         "mergedExamIds": [
           "postpone_027"
         ],
@@ -4544,7 +4544,7 @@
         "examId": "postpone_027",
         "venue": "201",
         "part": "aa2",
-        "partLabel": "AA2(+13分)",
+        "partLabel": "AA2(+48分)",
         "teacherId": "mqt2yca94h60u",
         "isMain": false,
         "isStandby": false,
